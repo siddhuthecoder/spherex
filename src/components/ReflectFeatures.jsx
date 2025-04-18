@@ -41,13 +41,13 @@ export default function ReflectFeatures() {
     <div class="flex flex-col items-center relative  py-12 px-4 justify-end">
        
         
-        <div class="relative  w-full flex flex-col items-center ">
-        <div class="absolute flex flex-col justify-center gap-5 top-[-80px] w-full max-w-4xl px-4 ">
+        {/* <div class="relative  w-full flex flex-col items-center overflow-hidden">
+        <div class="absolute flex flex-col justify-center gap-5 top-[-100px] md:top-[-80px] w-full md:max-w-4xl px-4 ">
             <div class="px-4 py-2 rounded-full text-sm font-medium border border-violet-400 text-violet-400 hover:text-white transition-all duration-300 shadow-[inset_0_0_15px_rgba(168,85,247,0.7)] w-[120px] mx-auto">
                 SphereX
             </div>
             
-            <h2 class="text-4xl md:text-5xl font-semibold leading-tight text-center">
+            <h2 class="text-3xl md:text-5xl font-semibold leading-tight text-center">
                 Smart Solutions for modern <br class="hidden md:block"/> Web and App Development.
             </h2>
             
@@ -55,7 +55,7 @@ export default function ReflectFeatures() {
                 Spherex empowers you to plan, build, and refine digital products effortlessly.<br class="hidden md:block"/> From idea to execution, it streamlines development for faster, smoother results.
             </p>
         </div>
-            <img src="services.png" alt="Services" class="serviceimg"/>
+            <img src="services.png" alt="Services" class="serviceimg "/>
             <div class="sky">
                 <div class="star"></div>
                 <div class="star"></div>
@@ -94,7 +94,7 @@ export default function ReflectFeatures() {
         </p>
       </div>
     </div>
-        </div>
+        </div> */}
         
        
     </div>
