@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './pages/Home'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom'
+import SignInForm from './components/SignIn'
 // import About from './pages/About'
 // import Services from './pages/Services'
 // import Projects from './pages/Projects'
@@ -10,6 +11,7 @@ const App = () => {
     <Router>
       <Routes>
         <Route path='/' element={<Home/>} />
+        <Route path='/signup' element={<SignInForm/>} />
         {/* <Route path='/about' element={<About/>} />
 
         <Route path='/projects' element={<Projects/>} />

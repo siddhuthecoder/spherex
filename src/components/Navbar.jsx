@@ -21,8 +21,8 @@ export default function Navbar() {
        
       </div>
       <div className='flex gap-6'>
-      <button className="text-white hover:text-purple-400">Login</button>
-      <button className="border-purple-600 border-[1px] text-white px-3 py-1 rounded-md md:hidden">SignUp</button>
+      <Link to='/signup'>   <button className="text-white hover:text-purple-400">Login</button></Link>
+    <Link to='/signup'>  <button className="border-purple-600 border-[1px] text-white px-3 py-1 rounded-md md:hidden">SignUp</button></Link>
 
       <div className='lg:hidden text-white text-3xl' onClick={()=>{setIsOpen(true)}}><IoMenu />
       </div>

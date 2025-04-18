@@ -27,11 +27,23 @@ export default function Features() {
   before:bg-gradient-to-r before:from-[rgba(255,255,255,0)] before:via-[rgba(255,255,255,0.2)] before:to-[rgba(255,255,255,0)]"
 >
 
-  {features.map((feature, index) => (
+  {features.slice(0,4).map((feature, index) => (
     <div
     key={index}
     className="relative animate-fade-in border-l border-l-[#ffffff3d] p-[24px_32px_36px] backdrop-blur-sm transition-all duration-300  cursor-pointer 
       hover:shadow-xl hover:bg-gradient-to-b from-[#030115] via-[#100D20] to-[#2C2A3D]
+      before:content-[''] before:absolute before:w-[3px] before:h-[16px] before:left-[-2px] before:top-[80px] before:bg-[#ffffff3d]"
+  >
+      <div className="mb-4 text-purple-400">{feature.icon}</div>
+      <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
+      <p className="text-lg text-gray-300">{feature.desc}</p>
+    </div>
+  ))}
+  {features.slice(4,8).map((feature, index) => (
+    <div
+    key={index}
+    className="relative animate-fade-in border-l border-l-[#ffffff3d] p-[24px_32px_36px] backdrop-blur-sm transition-all duration-300  cursor-pointer 
+      hover:shadow-xl hover:bg-gradient-to-t from-[#030115] via-[#100D20] to-[#2C2A3D]
       before:content-[''] before:absolute before:w-[3px] before:h-[16px] before:left-[-2px] before:top-[80px] before:bg-[#ffffff3d]"
   >
       <div className="mb-4 text-purple-400">{feature.icon}</div>

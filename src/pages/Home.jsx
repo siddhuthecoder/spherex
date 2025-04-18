@@ -7,7 +7,7 @@ import ReflectFeatures from '../components/ReflectFeatures';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import About from './About';
-
+import Pricing from '../components/Pricing';
 const Home = () => {
   const location = useLocation();
 
@@ -36,6 +36,9 @@ const Home = () => {
       <div ref={aboutRef}><About/></div>
       <div ref={servicesRef}><Features /></div>
       <div ref={projectsRef}><ReflectFeatures /></div>
+      <div >
+  <Pricing />
+</div>
       <div ref={contactRef} className="py-20 text-center"> {/* Your Contact Section */}<h2 className="text-2xl">Contact Section</h2></div>
       <Footer />
     </div>
