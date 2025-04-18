@@ -13,11 +13,11 @@ export default function Navbar() {
         <span className="text-lg font-semibold  ">Reflect</span>
       </div>
       <div className="hidden md:flex gap-6 text-sm items-center border-[1px] p-3 px-6 rounded-full  border-[#ffffff3d] bg-[rgba(255, 255, 255, .02)]">
-        <Link to='/' className="hover:text-purple-400">Home</Link>
-        <Link to='/about' className="hover:text-purple-400">About Us</Link>
-        <Link to='/projects' className="hover:text-purple-400">Projects</Link>
-        <Link to='/services' className="hover:text-purple-400">Services</Link>
-        <Link to='/contact' className="hover:text-purple-400">Contact</Link>
+        <Link to='/#home' className="hover:text-purple-400">Home</Link>
+        <Link to='/#about' className="hover:text-purple-400">AboutUs</Link>
+        <Link to='/#services' className="hover:text-purple-400">Services</Link>
+        <Link to='/#projects' className="hover:text-purple-400">Projects</Link>
+        <Link to='/#contact' className="hover:text-purple-400">Contact</Link>
        
       </div>
       <div className='flex gap-6'>

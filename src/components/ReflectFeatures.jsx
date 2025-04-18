@@ -38,7 +38,7 @@ const features = [
 export default function ReflectFeatures() {
   return (
     <div className="bg-[#020012] text-white py-16 px-4 text-center">
-      <h2 className="text-2xl sm:text-3xl font-semibold mb-12">
+      <h2 className="text-2xl sm:text-3xl font-bold my-12">
         What can you do with Reflect AI?
       </h2>
       <div

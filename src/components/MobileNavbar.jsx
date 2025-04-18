@@ -43,11 +43,11 @@ const MobileNavbar = ({isOpen,setIsOpen}) => {
 
       {/* Menu Items */}
       <div className="flex flex-col gap-6 mt-6 ">
-      <Link to='/' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Home</Link>
-      <Link to='/about' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">About Us</Link>
-      <Link to='/projects' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Projects</Link>
-      <Link to='/services' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Services</Link>
-      <Link to='/contact' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Contact</Link>
+      <Link to='/#home' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Home</Link>
+      <Link to='/#about' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">About Us</Link>
+      <Link to='/#services' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Services</Link>
+      <Link to='/#projects' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Projects</Link>
+      <Link to='/#contact' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Contact</Link>
       </div>
     </div>
   </div>

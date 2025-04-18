@@ -1,5 +1,6 @@
 import React from "react";
 import StarsCanvas from "./StarCanvas";
+import Background from "three/src/renderers/common/Background.js";
 const Hero = () => {
   return (
     <div className="relative w-full min-h-screen ">
@@ -12,9 +13,14 @@ const Hero = () => {
           Never miss a note, idea or connection.
         </p>
       </div>
-<StarsCanvas/>
       {/* Video Background with Mask */}
+      
       <div className="w-full h-full absolute bottom-0 inset-0 z-0 mt-[120px] md:mt-[180px]">
+        
+        <div className="flex justify-center">
+        <img src="circles.png" className="h-[700px] w-[700px] absolute bottom-2" />
+        </div>
+
         <video
           src="blackhole.webm"
           autoPlay
@@ -33,6 +39,9 @@ const Hero = () => {
           }}
         ></video>
       </div>
+      <StarsCanvas/>
+
+    
     </div>
   );
 };

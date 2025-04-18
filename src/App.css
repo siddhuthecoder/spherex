@@ -5,6 +5,9 @@
 
 
 
+html {
+  scroll-behavior: smooth;
+}
 
 .radar-sweep {
   width: 100%;

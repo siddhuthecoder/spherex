@@ -5,9 +5,9 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import { div } from "three/tsl";
 
-const PARTICLE_COUNT = 500;
+const PARTICLE_COUNT = 100;
 const SPAWN_RADIUS = 10;
-const SPEED = 0.007;
+const SPEED = 0.005;
 
 const StarBackground = () => {
   const ref = useRef();
@@ -81,7 +81,7 @@ const StarBackground = () => {
 
 const StarsCanvas = () => (
   <div className="flex justify-center w-full h-full z-[20]">
-  <div className="absolute top-[230px] w-full md:w-[500px]  ">
+  <div className="absolute bottom-1/3 w-full md:w-[500px]  ">
     <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <StarBackground />
