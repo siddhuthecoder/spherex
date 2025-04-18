@@ -6,10 +6,10 @@ import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 const Home = () => {
    return (
-     <div className="bg-[#020012] min-h-screen text-white font-sans">
+     <div className="bg-[#020012] min-h-screen w-full text-white font-sans">
        <Navbar />
        <Hero/>
-       <Features />
+      <Features />
       <ReflectFeatures/>
       <Footer />
      </div>

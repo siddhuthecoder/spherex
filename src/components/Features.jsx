@@ -1,7 +1,3 @@
-
-
-
-
 // components/Features.jsx
 import React from 'react';
 import { FaCloudUploadAlt, FaNetworkWired, FaMobileAlt, FaLock, FaCalendarAlt, FaPenNib, FaBolt, FaSearch } from 'react-icons/fa';

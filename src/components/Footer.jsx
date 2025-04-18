@@ -18,29 +18,29 @@ const  Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-md text-gray-300">
-              <li>Features</li>
-              <li>Integrations</li>
-              <li>Pricing</li>
-              <li>Changelog</li>
-              <li>Roadmap</li>
+              <li className='cursor-pointer hover:text-purple-500'>Features</li>
+              <li className='cursor-pointer hover:text-purple-500'>Integrations</li>
+              <li className='cursor-pointer hover:text-purple-500'>Pricing</li>
+              <li className='cursor-pointer hover:text-purple-500'>Changelog</li>
+              <li className='cursor-pointer hover:text-purple-500'>Roadmap</li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-md text-gray-300">
-              <li>Our team</li>
-              <li>Our values</li>
-              <li>Blog</li>
+              <li className='cursor-pointer hover:text-purple-500'>Our team</li>
+              <li className='cursor-pointer hover:text-purple-500'>Our values</li>
+              <li className='cursor-pointer hover:text-purple-500'>Blog</li>
             </ul>
           </div>
 
           <div>
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-md text-gray-300">
-              <li>Downloads</li>
-              <li>Documentation</li>
-              <li>Contact</li>
+              <li className='cursor-pointer hover:text-purple-500'>Downloads</li>
+              <li className='cursor-pointer hover:text-purple-500'>Documentation</li>
+              <li className='cursor-pointer hover:text-purple-500'>Contact</li>
             </ul>
           </div>
         </div>
