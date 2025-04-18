@@ -81,8 +81,8 @@ const StarBackground = () => {
 
 const StarsCanvas = () => (
   <div className="flex justify-center w-full h-full z-[20]">
-  <div className="absolute top-[150px] w-full md:w-[400px]  ">
-    <Canvas camera={{ position: [0, 0, 5] }}>
+  <div className="absolute top-[230px] w-full md:w-[500px]  ">
+    <Canvas camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <StarBackground />
         <Preload all />
