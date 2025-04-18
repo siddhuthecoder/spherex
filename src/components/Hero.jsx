@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="w-full h-full absolute bottom-0 inset-0 z-0 mt-[120px] md:mt-[180px]">
         
         <div className="flex justify-center">
-        <img src="circles.png" className="h-[700px] w-[700px] absolute bottom-2" />
+        <img src="circles.png" className="md:h-[700px] h-[300px] w-[300px] md:w-[700px] absolute bottom-1/3 md:bottom-2" />
         </div>
 
         <video
