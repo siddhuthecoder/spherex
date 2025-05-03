@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}", // Include all your React files
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        bruno: ['Bruno Ace', 'sans-serif'], // Add the new font here
+      },
+    },
   },
   plugins: [],
-}
+};

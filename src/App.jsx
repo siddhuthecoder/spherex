@@ -6,6 +6,7 @@ import SignInForm from './components/SignIn'
 // import Services from './pages/Services'
 // import Projects from './pages/Projects'
 // import Contact from './pages/Contact'
+import './App.css'
 const App = () => {
   return (
     <Router>
