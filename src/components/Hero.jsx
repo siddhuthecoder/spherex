@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="relative w-full min-h-screen ">
       {/* Centered Heading */}
       <div className="absolute md:top-[140px] w-full flex justify-center items-center flex-col text-center px-4 z-10 mt-[100px] md:mt-0">
-        <h2 className="text-[43px] md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+        <h2 className="text-[43px] md:text-5xl lg:text-6xl font-bruno text-white leading-tight">
           Think better with SphereX
         </h2>
         <p className="text-base md:text-lg text-[#efedfdb3] mt-2">

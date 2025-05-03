@@ -37,7 +37,7 @@ const features = [
 
 export default function ReflectFeatures() {
   return (
-    <div className="bg-[#020012] text-white py-16 px-4 text-center ">
+    <div className="bg-[#020012] text-white py-16 px-4 text-center font-nanum">
     <div class="flex flex-col items-center relative  py-12 px-4 justify-end">
        
         
