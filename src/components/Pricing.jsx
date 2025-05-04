@@ -5,8 +5,8 @@ const Pricing = () => {
   return (
     <div className="relative w-full md:h-[180vh]  mx-auto p-8 rounded-xl text-white md:mt-0 mt-[400px] md:overflow-hidden flex flex-col-reverse md:flex-col items-center  font-teko"
       >
-        <img src="PRICING.png" alt="" className='md:scale-[0.6] scale-[1.3]' />
-        <div className='absolute bottom-[260px] md:top-[70px]'>
+        <img src="PRICING.png" alt="" className='md:scale-[0.6]  w-full ' />
+        <div className='absolute bottom-[260px] md:top-[70px] '>
       <div className="text-center mb-8">
       <div class="px-2 py-1 rounded-full text-md font-medium border border-violet-400  hover:text-white transition-all duration-300 shadow-[inset_0_0_15px_rgba(168,85,247,0.7)] w-[120px] mx-auto">
                 Get Access
