@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="relative w-full min-h-screen ">
       {/* Centered Heading */}
-      <div className="absolute md:top-[140px] w-full flex justify-center items-center flex-col text-center px-4 z-10 mt-[100px] md:mt-0">
+      <div className="absolute md:top-[140px] top-[100px] w-full flex justify-center items-center flex-col text-center px-4 z-10 mt-[100px] md:mt-0">
         <h2 className="text-[43px] md:text-5xl lg:text-6xl font-bruno text-white leading-tight">
           Think better with SphereX
         </h2>

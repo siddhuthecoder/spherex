@@ -98,7 +98,7 @@ export default function ReflectFeatures() {
         
        
     </div>
-    <div className="mt-[-30px]">
+    <div className="md:mt-[-30px] mt-[-55px]">
       <h2 className="text-2xl sm:text-5xl font-semibold my-12">
         What can you do with SphereX ?
       </h2>

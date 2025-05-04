@@ -9,13 +9,13 @@ const MobileNavbar = ({isOpen,setIsOpen}) => {
 
     {/* Sidebar Menu */}
     <div
-      className={`fixed top-0 left-0 w-[320px] h-full z-50 
+      className={`fixed top-0 left-0 w-full h-full z-50 
         text-white transition-all duration-500 ease-in-out 
         ${isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} 
         backdrop-blur-lg`}
     >
       {/* Header */}
-      <div className="flex items-center justify-between p-4 border-b border-[#ffffff15]">
+      <div className="flex items-center justify-between p-4 py-6 border-b border-[#ffffff15]">
         <div className="flex items-center gap-2">
           <img
             src="logo.png"
@@ -24,10 +24,10 @@ const MobileNavbar = ({isOpen,setIsOpen}) => {
           />
           <span className="text-lg font-semibold">Reflect</span>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-4 items-center">
           <button className="text-md font-medium">Login</button>
           <button
-            className="px-4 py-1 rounded-lg text-sm font-medium 
+            className="px-2 py-1 rounded-lg text-sm font-medium 
               border border-violet-400 text-violet-400 
               hover:text-white hover:border-white 
               transition-all duration-300
