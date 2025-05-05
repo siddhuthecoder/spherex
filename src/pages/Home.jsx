@@ -30,7 +30,7 @@ const Home = () => {
   
 
   return (
-    <div className="bg-[#020012] min-h-screen w-full text-white font-sans scroll-smooth">
+    <div className="bg-[#020012] min-h-screen w-full text-white  scroll-smooth font-jost">
       <Navbar />
      <div ref={homeRef}><Hero /></div> 
       <div ref={aboutRef}><About/></div>

@@ -6,10 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bruno: ['Caveat', 'sans-serif'],
-        brunosc:['Tagesschrift','sans-serif'],
-        nanum:['Nanum Myeongjo','sans-serif'] ,
-        teko:['Teko','sans-serif'] // Add the new font here
+      jost: "Jost",
       },
     },
   },

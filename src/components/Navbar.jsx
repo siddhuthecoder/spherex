@@ -7,10 +7,10 @@ export default function Navbar() {
   const [isOpen,setIsOpen] = useState(false)
   return (
     <div>
-    <nav className="flex justify-between items-center font-bruno px-3 md:px-10 py-5  backdrop-blur-md border-b border-[#1a1332] fixed top-0 z-50 w-full">
+    <nav className="flex justify-between items-center  px-3 md:px-10 py-5  backdrop-blur-md border-b border-[#1a1332] fixed top-0 z-50 w-full font-jost">
       <div className="flex items-center gap-2">
         <div className="w-10 h-10 rounded-full "><img src="logo.png" alt="" /></div>
-        <span className="text-4xl font-bruno  font-bold ">Reflect</span>
+        <span className="text-4xl   font-bold ">Reflect</span>
       </div>
       <div className="hidden md:flex gap-6 text-md  items-center border-[1px] p-3 px-6 rounded-full  border-[#ffffff3d] bg-[rgba(255, 255, 255, .02)]">
         <Link to='/#home' className="hover:text-purple-400">Home</Link>

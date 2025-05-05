@@ -15,12 +15,12 @@ const features = [
 
 export default function Features() {
   return (
-    <div className='px-[10px] md:px-[100px] py-[50px] relative font-brunosc '>
+    <div className='px-[10px] md:px-[100px] py-[50px] relative  '>
       <h3 className='text-center text-4xl font-bold my-[50px]'>Our Services</h3>
   <div className="relative group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[2px]
   after:content-[''] after:absolute after:top-0 after:right-0 after:w-[1px] after:h-full after:pointer-events-none 
   after:duration-500 after:ease-[cubic-bezier(0.3,0.8,0,1)] 
-  after:bg-gradient-to-t after:from-[rgba(255,255,255,0)] after:to-[rgba(255,255,255,0.2)]
+  after:bg-gradient-to-t after:from-[rgba(255,255,255,0)] after:to-[rgba(124,95,95,0.2)]
 
   before:content-[''] before:absolute before:bottom-1/2 before:left-0 before:w-full before:h-[1px] before:pointer-events-none 
   before:duration-500 before:ease-[cubic-bezier(0.3,0.8,0,1)] 
