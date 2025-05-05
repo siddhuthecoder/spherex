@@ -3,7 +3,7 @@ import StarsCanvas from "./StarCanvas";
 import Background from "three/src/renderers/common/Background.js";
 const Hero = () => {
   return (
-    <div className="relative w-full min-h-screen font-josefin ">
+    <div className="relative w-full min-h-screen font-jost ">
       {/* Centered Heading */}
       <div className="absolute md:top-[140px] w-full flex justify-center items-center flex-col text-center px-4 z-10 mt-[100px] md:mt-0">
         <h2 className="text-[43px] md:text-5xl lg:text-6xl  text-white leading-tight">

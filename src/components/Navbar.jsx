@@ -20,9 +20,9 @@ export default function Navbar() {
         <Link to='/#contact' className="hover:text-purple-400">Contact</Link>
        
       </div>
-      <div className='flex gap-6 text-lg'>
-      <Link to='/sigin'>   <button className="text-white hover:text-purple-400 mt-3">Login</button></Link>
-    <Link to='/signup'>  <button className="border-purple-600 border-[1px] text-white px-3 py-1 rounded-md md:hidden">SignUp</button></Link>
+      <div className='flex items-center gap-4 md:gap-6 text-lg'>
+      <Link to='/sigin'>   <button className=" text-white hover:text-purple-400 ">Login</button></Link>
+    <Link to='/signup'>  <button className="md:hidden border-purple-600 border-[1px] text-white px-3 py-1 rounded-md ">SignUp</button></Link>
 
       <div className='lg:hidden text-white text-3xl' onClick={()=>{setIsOpen(true)}}><IoMenu />
       </div>

@@ -1,21 +1,23 @@
 import React from 'react'
+import { FaDiscord } from "react-icons/fa6";
+import { FaTwitter } from "react-icons/fa";
 const  Footer = () => {
   return (
-    <footer className="bg-[#0f0c1d] text-white py-12 px-[20px] md:px-[100px]  text-lg font-bold">
+    <footer className="bg-[#0f0c1d] text-white py-12 px-[20px] md:px-[100px]  text-lg font-jost">
       
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div>
+      <div className="md:max-w-7xl  mx-auto">
+        <div className="flex md:flex-row flex-col md:justify-between  justify-center   gap-10">
+          <div className='flex md:flex-col flex-row justify-between md:w-auto md:h-auto w-full items-center'>
             <div className="flex items-center gap-2">
               <img src="/logo.png" alt="Reflect Logo" className="w-6 h-6" />
               <span className="text-xl font-semibold">Reflect</span>
             </div>
-            <div className="flex gap-4 mt-6 text-2xl">
-              <i className="fa-brands fa-discord"></i>
-              <i className="fa-brands fa-twitter"></i>
+            <div className="flex gap-4 text-2xl text-gray-700">
+              <span><FaDiscord/></span>
+              <span><FaTwitter/></span>
             </div>
           </div>
-
+          <div className='flex md:flex-row md:gap-40 gap-20 flex-wrap'>
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-md text-gray-300">
@@ -44,6 +46,7 @@ const  Footer = () => {
               <li className='cursor-pointer hover:text-purple-500'>Contact</li>
             </ul>
           </div>
+          </div>
         </div>
 
         <div className="border-t border-[#2c254a] mt-12 pt-8 md:flex justify-between">
@@ -66,7 +69,7 @@ const  Footer = () => {
           </form>
         </div>
 
-        <div className="border-t border-[#2c254a] mt-12 pt-6 flex flex-col sm:flex-row justify-between text-sm text-gray-500">
+        <div className="border-t border-[#2c254a] mt-12 pt-6 flex flex-col sm:flex-row items-center justify-center text-sm text-gray-500">
           <div className="flex gap-4 mb-2 sm:mb-0">
             <span className="hover:underline cursor-pointer">Privacy Policy</span>
             <span className="hover:underline cursor-pointer">Terms of Conditions</span>

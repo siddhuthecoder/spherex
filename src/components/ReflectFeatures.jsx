@@ -37,7 +37,7 @@ const features = [
 
 export default function ReflectFeatures() {
   return (
-    <div className="bg-[#020012] text-white py-16 px-4 text-center ">
+    <div className="bg-[#020012] text-white py-16 px-4 text-center font-jost ">
     <div class="flex flex-col items-center relative  py-12 px-4 justify-end">
        
         
@@ -98,8 +98,8 @@ export default function ReflectFeatures() {
         
        
     </div>
-    <div className="mt-[-30px]">
-      <h2 className="text-2xl sm:text-5xl font-semibold my-12">
+    <div className="md:mt-[-30px] mt-[-55px]">
+      <h2 className="text-2xl sm:text-5xl  my-12">
         What can you do with SphereX ?
       </h2>
       <div
