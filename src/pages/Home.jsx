@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import About from "./About";
 import Pricing from "../components/Pricing";
 import ContactUs from "../components/ContactUs";
+import Testimonals from "../accernity/Testimonals";
 const Home = () => {
   const location = useLocation();
 
@@ -51,6 +52,9 @@ const Home = () => {
       </div>
       <div>
         <Pricing />
+      </div>
+      <div>
+        <Testimonals/>
       </div>
       <div ref={contactRef} className="py-20 text-center">
        
