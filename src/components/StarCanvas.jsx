@@ -65,6 +65,15 @@ const StarBackground = () => {
 
     ref.current.geometry.attributes.position.needsUpdate = true;
   });
+  const groupRef = useRef();
+
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.0015; // adjust speed if needed
+      groupRef.current.rotation.x += 0.0005; // optional: multi-axis rotation
+    }
+  });
+
 
   return (
     <Points ref={ref} positions={positions} stride={3} frustumCulled>

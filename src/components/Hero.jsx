@@ -14,12 +14,11 @@ const Hero = () => {
         </p>
       </div>
       {/* Video Background with Mask */}
-      
+     
+
       <div className="w-full h-full absolute bottom-0 inset-0 z-0 mt-[120px] md:mt-[180px]">
         
-        <div className="flex justify-center">
-        <img src="circles.png" className="md:h-[700px] h-[300px] w-[300px] md:w-[700px] absolute bottom-1/3 md:bottom-2" />
-        </div>
+    
 
         <video
           src="blackhole.webm"
@@ -27,18 +26,26 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover "
           style={{
             maskImage:
-              "radial-gradient(50% 50% at 50% 50%, #fff 60.94%, transparent 100%)",
+              "radial-gradient(50% 50% at 50% 50%, #fff 80.94%, transparent 100%)",
             WebkitMaskImage:
-              "radial-gradient(50% 50% at 50% 50%, #fff 60.94%, transparent 100%)",
+              "radial-gradient(50% 50% at 50% 50%, #fff 80.94%, transparent 100%)",
             maskSize: "cover",
             WebkitMaskSize: "cover",
             position: "absolute",
           }}
         ></video>
+          <div className="flex justify-center items-center -z-10">
+      <div className="h-[700px] w-[700px] scale-[0.8]   rounded-full border-t-[2px] mt-[-20px]">
+      <div className="h-[500px] w-[500px] scale-[0.9] rounded-full border-t-[2px] absolute transform translate-x-[20%] translate-y-[15%]">
+         
+         </div>
+</div>
+</div>
       </div>
+    
       <StarsCanvas/>
 
     
