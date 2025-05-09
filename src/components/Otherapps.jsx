@@ -10,7 +10,7 @@ export default function Integrations() {
             Use Reflect with other apps
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-2xl mx-auto items-center text-center relative">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-center text-center relative">
             <div className="space-y-2">
               <div className="mx-auto w-fit p-2 bg-[#ff5722] rounded">
                 <Zap className="text-white" />
