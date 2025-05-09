@@ -10,6 +10,7 @@ import About from "./About";
 import Pricing from "../components/Pricing";
 import ContactUs from "../components/ContactUs";
 import Testimonals from "../accernity/Testimonals";
+import Otherapps from "../components/Otherapps"
 const Home = () => {
   const location = useLocation();
 
@@ -49,6 +50,9 @@ const Home = () => {
       </div>
       <div ref={projectsRef}>
         <ReflectFeatures />
+      </div>
+      <div>
+        <Otherapps />
       </div>
       <div>
         <Pricing />

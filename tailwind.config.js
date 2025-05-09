@@ -28,6 +28,21 @@ module.exports = {
           },
         },
       },
+      keyframes: {
+        ripple: {
+          '0%': {
+            transform: 'scale(0.7)',
+            opacity: '1',
+          },
+          '100%': {
+            transform: 'scale(2.5)',
+            opacity: '0',
+          },
+        },
+      },
+      animation: {
+        ripple: 'ripple 4s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
