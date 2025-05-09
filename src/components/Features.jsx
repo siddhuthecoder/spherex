@@ -16,7 +16,8 @@ const features = [
 export default function Features() {
   return (
     <div className='px-[10px] md:px-[100px] py-[50px] relative  font-jost'>
-      <h3 className='text-center text-4xl  my-[50px] font-jost'>Our Services</h3>
+      <h3 className='text-center text-[40px] md:text-[56px]  font-medium  my-[50px] bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent block font-jost'>Our Services</h3>
+      
   <div className="relative group grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[2px]
   after:content-[''] after:absolute after:top-0 after:right-0 after:w-[1px] after:h-full after:pointer-events-none 
   after:duration-500 after:ease-[cubic-bezier(0.3,0.8,0,1)] 

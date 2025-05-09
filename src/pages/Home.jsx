@@ -11,6 +11,7 @@ import Pricing from "../components/Pricing";
 import ContactUs from "../components/ContactUs";
 import Testimonals from "../accernity/Testimonals";
 import Otherapps from "../components/Otherapps"
+import Academy from "../components/Academy";
 const Home = () => {
   const location = useLocation();
 
@@ -42,9 +43,9 @@ const Home = () => {
       <div ref={homeRef}>
         <Hero />
       </div>
-      <div ref={aboutRef}>
+      {/* <div ref={aboutRef}>
         <About />
-      </div>
+      </div> */}
       <div ref={servicesRef}>
         <Features />
       </div>
@@ -59,6 +60,9 @@ const Home = () => {
       </div>
       <div>
         <Testimonals/>
+      </div>
+      <div>
+        <Academy/>
       </div>
       <div ref={contactRef} className="py-20 text-center">
        
