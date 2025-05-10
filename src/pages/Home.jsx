@@ -10,6 +10,8 @@ import About from "./About";
 import Pricing from "../components/Pricing";
 import ContactUs from "../components/ContactUs";
 import Testimonals from "../accernity/Testimonals";
+
+import Academy from "../components/Academy";
 import Otherapps from "../components/Otherapps";
 import NeverLoose from "../components/NeverLoose";
 const Home = () => {
@@ -43,9 +45,9 @@ const Home = () => {
       <div ref={homeRef}>
         <Hero />
       </div>
-      <div ref={aboutRef}>
+      {/* <div ref={aboutRef}>
         <About />
-      </div>
+      </div> */}
       <div ref={servicesRef}>
         <Features />
       </div>
@@ -64,6 +66,9 @@ const Home = () => {
       </div>
       <div>
         <Testimonals/>
+      </div>
+      <div>
+        <Academy/>
       </div>
       <div ref={contactRef} className="py-20 text-center">
        

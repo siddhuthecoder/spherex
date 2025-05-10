@@ -65,6 +65,15 @@ const StarBackground = () => {
 
     ref.current.geometry.attributes.position.needsUpdate = true;
   });
+  const groupRef = useRef();
+
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.0015; // adjust speed if needed
+      groupRef.current.rotation.x += 0.0005; // optional: multi-axis rotation
+    }
+  });
+
 
   return (
     <Points ref={ref} positions={positions} stride={3} frustumCulled>
@@ -81,8 +90,8 @@ const StarBackground = () => {
 
 const StarsCanvas = () => (
   <div className="flex justify-center w-full h-full z-[20]">
-  <div className="absolute bottom-1/3 w-full md:w-[500px]  ">
-    <Canvas camera={{ position: [0, 0, 1] }}>
+  <div className="absolute bottom-1/3 w-full md:w-[500px] ">
+    <Canvas camera={{ position: [0, 0, 1] }} >
       <Suspense fallback={null}>
         <StarBackground />
         <Preload all />

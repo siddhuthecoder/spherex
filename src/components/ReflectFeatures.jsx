@@ -98,8 +98,8 @@ export default function ReflectFeatures() {
         
        
     </div>
-    <div className="md:mt-[-30px] mt-[-55px]">
-      <h2 className="text-2xl sm:text-5xl  my-12">
+    <div className="md:mt-[-150px] mt-[-55px]">
+      <h2 className="text-[40px] sm:text-[56px] py-20  bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent block font-jost">
         What can you do with SphereX ?
       </h2>
       <div
