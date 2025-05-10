@@ -8,7 +8,7 @@ const Pricing = () => {
         <img src="PRICING.png" alt="" className='md:scale-[0.6]  w-full ' />
         <div className='absolute bottom-[260px] md:top-[70px] '>
       <div className="text-center mb-8">
-      <div class="px-2 py-1 rounded-full text-md font-medium border border-violet-400  hover:text-white transition-all duration-300 shadow-[inset_0_0_15px_rgba(168,85,247,0.7)] w-[120px] mx-auto">
+      <div className="px-2 py-1 rounded-full text-md font-medium border border-violet-400  hover:text-white transition-all duration-300 shadow-[inset_0_0_15px_rgba(168,85,247,0.7)] w-[120px] mx-auto">
                 Get Access
             </div>
                     <p className="text-gray-300 text-2xl md:text-5xl font-semibold mt-[20px] md:leading-normal">We like keeping things simple</p>
@@ -69,7 +69,7 @@ const Pricing = () => {
   </div>
 </div>
 <div className='flex justify-center mt-[30px]'>
-<button class="w-[170px] px-2 py-1 rounded-full text-md font-medium border border-violet-400  hover:text-white transition-all duration-300 shadow-[inset_0_0_15px_rgba(168,85,247,0.7)]  mx-auto">
+<button className="w-[170px] px-2 py-1 rounded-full text-md font-medium border border-violet-400  hover:text-white transition-all duration-300 shadow-[inset_0_0_15px_rgba(168,85,247,0.7)]  mx-auto">
                 Start Your Free Trail
             </button>
       </div>

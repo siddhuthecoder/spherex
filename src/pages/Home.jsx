@@ -10,7 +10,8 @@ import About from "./About";
 import Pricing from "../components/Pricing";
 import ContactUs from "../components/ContactUs";
 import Testimonals from "../accernity/Testimonals";
-import Otherapps from "../components/Otherapps"
+import Otherapps from "../components/Otherapps";
+import NeverLoose from "../components/NeverLoose";
 const Home = () => {
   const location = useLocation();
 
@@ -47,6 +48,10 @@ const Home = () => {
       </div>
       <div ref={servicesRef}>
         <Features />
+      </div>
+      <div>
+        <NeverLoose/>
+
       </div>
       <div ref={projectsRef}>
         <ReflectFeatures />
