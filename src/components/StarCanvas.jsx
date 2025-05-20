@@ -5,9 +5,9 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import { div } from "three/tsl";
 
-const PARTICLE_COUNT = 100;
-const SPAWN_RADIUS = 10;
-const SPEED = 0.005;
+const PARTICLE_COUNT = 700;
+const SPAWN_RADIUS = 20;
+const SPEED = 0.008;
 
 const StarBackground = () => {
   const ref = useRef();
@@ -80,7 +80,7 @@ const StarBackground = () => {
       <PointMaterial
         transparent
         color="#ffffff"
-        size={0.04}
+        size={0.03}
         sizeAttenuation
         depthWrite={false}
       />
