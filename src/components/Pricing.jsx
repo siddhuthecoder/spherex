@@ -3,7 +3,7 @@ import { FaRegDotCircle } from "react-icons/fa";
 
 const Pricing = () => {
   return (
-    <div className="relative w-full md:h-[180vh]  mx-auto  rounded-xl  text-white md:mt-0 mt-[500px] md:overflow-hidden flex flex-col-reverse md:flex-col items-center  font-jost">
+    <div className="relative w-full md:h-[180vh]  mx-auto  rounded-xl  text-white md:mt-0 mt-[550px] md:overflow-hidden flex flex-col-reverse md:flex-col items-center  font-jost">
       <div className="max-w-100vw overflow-hidden">
               <img src="PRICING.png" alt="" className="md:scale-[0.6] scale-[1.4] w-full " />
 

@@ -31,7 +31,7 @@ const Hero = () => {
   return (
     <div className="hero relative w-full min-h-screen font-jost overflow-hidden">
       {/* Centered Heading */}
-      <div className="hero-content overflow-hidden w-full py-[100px] flex justify-center items-center flex-col text-center px-4 z-10 mt-[100px] md:mt-[50px]">
+      <div className="hero-content overflow-hidden w-full py-[100px] flex justify-center items-center flex-col text-center px-4 z-10 md:mt-[50px]">
         <div className="hero-badge flex gap-2">
          <span className="hero-badge-text"> <BsStars/></span>   
           <div class="hero-badge-text">Take notes using AI</div>
@@ -40,7 +40,7 @@ const Hero = () => {
         <h2 className="text-[44px] md:text-5xl lg:text-[70px]  font-medium leading-tight bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent block font-jost">
           Think better with SphereX
         </h2>
-        <p className="text-base md:text-lg text-[#efedfdb3] mt-2">
+        <p className="text-base md:text-lg text-[#efedfdb3] mt-2 mb-5">
           Never miss a note, idea or connection.
         </p>
       </div>
@@ -48,7 +48,7 @@ const Hero = () => {
       <Test/>
       <div className="hero-black-hole">
   
-        <div className="hero-video w-full h-full mt-[-120px]">
+        <div className="hero-video w-full h-full mt-[-150px] md:mt-[-120px]">
          
           <video
             src="blackhole.webm"
