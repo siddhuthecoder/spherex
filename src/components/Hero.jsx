@@ -1,7 +1,7 @@
 import React from "react";
 import StarsCanvas from "./StarCanvas";
 import { BsStars } from "react-icons/bs";
-
+import Test from "./Test";
 const Hero = () => {
   // const generateRandomDivs = (count = 99) => {
   //   return Array.from({ length: count }, (_, i) => {
@@ -29,11 +29,11 @@ const Hero = () => {
   // };
 
   return (
-    <div className="hero relative w-full min-h-screen font-jost ">
+    <div className="hero relative w-full min-h-screen font-jost overflow-hidden">
       {/* Centered Heading */}
-      <div className="hero-content absolute md:top-[140px] w-full flex justify-center items-center flex-col text-center px-4 z-10 mt-[100px] md:mt-0">
+      <div className="hero-content overflow-hidden w-full py-[100px] flex justify-center items-center flex-col text-center px-4 z-10 mt-[100px] md:mt-[50px]">
         <div className="hero-badge flex gap-2">
-         <span className="hero-badge-text"> <BsStars/></span>
+         <span className="hero-badge-text"> <BsStars/></span>   
           <div class="hero-badge-text">Take notes using AI</div>
         </div>
 
@@ -45,38 +45,32 @@ const Hero = () => {
         </p>
       </div>
       {/* Video Background with Mask */}
-
+      <Test/>
       <div className="hero-black-hole">
-        <div className="hero-video w-full h-full absolute bottom-0 inset-0 z-0 mt-[120px] md:mt-[180px]">
+  
+        <div className="hero-video w-full h-full mt-[-120px]">
+         
           <video
             src="blackhole.webm"
             autoPlay
             loop
             muted
             playsInline
-            className="w-full h-full object-cover "
+            className="w-full h-full object-cover z-0"
             style={{
               maskImage:
                 "radial-gradient(50% 50% at 50% 50%, #fff 80.94%, transparent 100%)",
               WebkitMaskImage:
                 "radial-gradient(50% 50% at 50% 50%, #fff 80.94%, transparent 100%)",
               maskSize: "cover",
-              WebkitMaskSize: "cover",
+              WebkitMaskSize: "fit",
               position: "absolute",
             }}
           ></video>
+       
+
         </div>
-        <div className="hero-black-hole-circles">
-          <div className="hero-black-hole-circle hero-black-hole-circle-0">
-            <div className="hero-black-hole-circle-dot"></div>
-            <div className="hero-black-hole-circle-dot"></div>
-            <div className="hero-black-hole-circle-dot"></div>
-            <div className="hero-black-hole-circle-dot"></div>
-            <div className="hero-black-hole-circle-dot"></div>
-            <div className="hero-black-hole-circle-dot"></div>
-            <div className="hero-black-hole-circle-dot"></div>
-          </div>
-        </div>
+        
 
         <StarsCanvas />
       </div>

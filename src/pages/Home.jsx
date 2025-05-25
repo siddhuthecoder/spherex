@@ -14,6 +14,7 @@ import Testimonals from "../accernity/Testimonals";
 import Academy from "../components/Academy";
 import Otherapps from "../components/Otherapps";
 import NeverLoose from "../components/NeverLoose";
+import Test from "../components/Test";
 const Home = () => {
   const location = useLocation();
 
@@ -48,9 +49,11 @@ const Home = () => {
       {/* <div ref={aboutRef}>
         <About />
       </div> */}
+     
       <div ref={servicesRef}>
         <Features />
       </div>
+        
       <div>
         <NeverLoose/>
 
