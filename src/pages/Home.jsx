@@ -10,18 +10,11 @@ import About from "./About";
 import Pricing from "../components/Pricing";
 import ContactUs from "../components/ContactUs";
 import Testimonals from "../accernity/Testimonals";
-<<<<<<< HEAD
-import HowWeCanElevate from "../components/HowWeCanElevate";
-import Approach from "../components/Approach/Approach"
-import HowWeWork from "../components/HowWeWork";
-=======
-
 import Academy from "../components/Academy";
 import Otherapps from "../components/Otherapps";
 import NeverLoose from "../components/NeverLoose";
 import FAQ from "../components/FAQ";
 import Test from "../components/Test";
->>>>>>> 93b1fa179cb3ee3bcc38d2dc0253752834555ef6
 const Home = () => {
   const location = useLocation();
 
@@ -53,19 +46,6 @@ const Home = () => {
       <div ref={homeRef}>
         <Hero />
       </div>
-<<<<<<< HEAD
-     
-      {/* <div ref={aboutRef}>
-        <About />
-      </div> */}
-       
-      <div ref={servicesRef}>
-        <Features />
-      </div>
-       <div><HowWeCanElevate/></div>
-       <div><Approach/></div>
-       <div><HowWeWork/></div>
-=======
       {/* <div ref={aboutRef}>
         <About />
       </div> */}
@@ -78,7 +58,6 @@ const Home = () => {
         <NeverLoose/>
 
       </div>
->>>>>>> 93b1fa179cb3ee3bcc38d2dc0253752834555ef6
       <div ref={projectsRef}>
         <ReflectFeatures />
       </div>
