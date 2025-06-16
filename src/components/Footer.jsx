@@ -1,82 +1,98 @@
-import React from 'react'
-import { FaDiscord } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-const  Footer = () => {
+import React from "react";
+import {
+  FaTwitter,
+  FaGithub,
+  FaYoutube,
+  FaInstagram,
+  FaLinkedin,
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+
+const Footer=()=> {
   return (
-    <footer className="bg-[#0f0c1d] text-white py-12 px-[20px] md:px-[100px]  text-lg font-jost">
-      
-      <div className="md:max-w-7xl  mx-auto">
-        <div className="flex md:flex-row flex-col md:justify-between  justify-center   gap-10">
-          <div className='flex md:flex-col flex-row justify-between md:w-auto md:h-auto w-full items-center'>
+    <footer className="bg-black text-purple-200 py-12 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-10">
+        {/* Logo and Intro */}
+        <div className="md:col-span-2">
+          <h2 className="text-2xl font-bold text-white mb-4">Reflect</h2>
+          <p className="mb-4 text-sm">
+            Reflect is a full-service digital agency specializing in web and mobile development, and cutting-edge technology solutions.
+          </p>
+          <div className="flex gap-4 mb-4 text-xl">
+            <a href="#"><FaTwitter /></a>
+            <a href="#"><FaGithub /></a>
+            <a href="#"><FaYoutube /></a>
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaLinkedin /></a>
+            <a href="#"><FaEnvelope /></a>
+            <a href="#"><FaPhone /></a>
+          </div>
+          <p className="text-lg mb-2">Our mission is to help businesses build exceptional web and mobile applications with expert UI/UX design and development.</p>
+          <div className="text-lg space-y-1 mt-4">
             <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="Reflect Logo" className="w-6 h-6" />
-              <span className="text-xl font-semibold">Reflect</span>
+              <FaMapMarkerAlt /> Mangaluru
             </div>
-            <div className="flex gap-4 text-2xl text-gray-700">
-              <span><FaDiscord/></span>
-              <span><FaTwitter/></span>
+            <div className="flex items-center gap-2">
+              <FaPhone /> +91 9480 987 928
             </div>
-          </div>
-          <div className='flex md:flex-row md:gap-40 gap-20 flex-wrap'>
-          <div>
-            <h3 className="font-semibold mb-4">Product</h3>
-            <ul className="space-y-2 text-md text-gray-300">
-              <li className='cursor-pointer hover:text-purple-500'>Features</li>
-              <li className='cursor-pointer hover:text-purple-500'>Integrations</li>
-              <li className='cursor-pointer hover:text-purple-500'>Pricing</li>
-              <li className='cursor-pointer hover:text-purple-500'>Changelog</li>
-              <li className='cursor-pointer hover:text-purple-500'>Roadmap</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Company</h3>
-            <ul className="space-y-2 text-md text-gray-300">
-              <li className='cursor-pointer hover:text-purple-500'>Our team</li>
-              <li className='cursor-pointer hover:text-purple-500'>Our values</li>
-              <li className='cursor-pointer hover:text-purple-500'>Blog</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2 text-md text-gray-300">
-              <li className='cursor-pointer hover:text-purple-500'>Downloads</li>
-              <li className='cursor-pointer hover:text-purple-500'>Documentation</li>
-              <li className='cursor-pointer hover:text-purple-500'>Contact</li>
-            </ul>
-          </div>
+            <div className="flex items-center gap-2">
+              <FaEnvelope /> hello@pixelsandgrids.com
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-[#2c254a] mt-12 pt-8 md:flex justify-between">
-            <div>
-          <h4 className="text-lg font-semibold">Get free note-taking workflows</h4>
-          <p className="text-sm text-gray-400 mb-4">In our weekly newsletter.</p>
-          </div>
-          <form className="flex flex-col sm:flex-row gap-4 sm:items-center">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 rounded-md text-white bg-transparent border-[1px]  sm:w-64 w-full"
-            />
-            <button
-              type="submit"
-              className="bg-gray-200 text-black px-4 py-2 rounded-md hover:bg-white"
-            >
-              Subscribe
-            </button>
-          </form>
+        {/* Services */}
+        <div>
+          <h3 className="font-semibold text-white mb-3">SERVICES</h3>
+          <ul className="space-y-1 text-lg">
+            <li>Web Development</li>
+            <li>Mobile App Development</li>
+            <li>UI/UX Design</li>
+            <li>API Integrations</li>
+            <li>Custom Dashboards</li>
+            <li>E-commerce Solutions</li>
+            <li>Cloud Hosting</li>
+            <li>No-code Development</li>
+            <li>Consulting</li>
+            <li>SEO & Performance Optimization</li>
+          </ul>
         </div>
 
-        <div className="border-t border-[#2c254a] mt-12 pt-6 flex flex-col sm:flex-row items-center justify-center text-sm text-gray-500">
-          <div className="flex gap-4 mb-2 sm:mb-0">
-            <span className="hover:underline cursor-pointer">Privacy Policy</span>
-            <span className="hover:underline cursor-pointer">Terms of Conditions</span>
-          </div>
-          <div>
-            Reflect App, LLC. All rights reserved.
-          </div>
+        {/* Industries */}
+        <div>
+          <h3 className="font-semibold text-white mb-3">INDUSTRIES</h3>
+          <ul className="space-y-1 text-lg">
+            <li>Startups</li>
+            <li>SaaS Companies</li>
+            <li>E-commerce</li>
+            <li>Real Estate</li>
+            <li>Healthcare</li>
+            <li>Education</li>
+            <li>Fintech</li>
+            <li>Marketing Agencies</li>
+            <li>Enterprise Solutions</li>
+            <li>Government & NGOs</li>
+          </ul>
+        </div>
+
+        {/* Resources & Company */}
+        <div>
+          <h3 className="font-semibold text-white mb-3">RESOURCES</h3>
+          <ul className="space-y-1 text-lg mb-6">
+            <li>Blog</li>
+            <li>Case Studies</li>
+            <li>Portfolio</li>
+            <li>Community</li>
+          </ul>
+          <h3 className="font-semibold text-white mb-3">COMPANY</h3>
+          <ul className="space-y-1 text-lg">
+            <li>About Us</li>
+            <li>Contact</li>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+          </ul>
         </div>
       </div>
     </footer>

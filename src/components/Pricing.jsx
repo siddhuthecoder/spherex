@@ -54,7 +54,7 @@ const Pricing=()=> {
 
   return (
     <div className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="text-6xl font-bold flex justify-center items-center mb-6">Pricing Models</div>
+      <div className="text-6xl  flex justify-center items-center mb-6">Pricing Models</div>
       <h2 className="text-lg  text-center mb-4">
         Choose between our fixed pricing packages or flexible retainer model
       </h2>
