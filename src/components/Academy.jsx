@@ -2,7 +2,7 @@ import React from "react";
 
 const Academy = () => {
   return (
-    <div className="relative h-[700px] md:min-h-screen flex flex-col  items-center justify-between md:justify-center overflow-hidden font-jost">
+    <div className="relative h-[700px] md:min-h-screen flex flex-col  items-center justify-between md:justify-center overflow-hidden font-jost mt-16 md:mt-0">
       {/* Grid Overlay */}
       <div className=" z-10 text-center absolute md:mt-0">
         <button className="border border-purple-600 text-white rounded-full h-[36px] w-[125px] bg-gradient-to-b from-purple-400/30 to-purple-400/10 shadow-inner shadow-purple-500/30 hover:shadow-purple-500/60 transition duration-300 mb-6">

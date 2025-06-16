@@ -57,12 +57,15 @@ const NeverLoose = () => {
           </div> */}
         </h2>
         <p className="section-header-description">
-          Collect your web snippets, Kindle highlights and important links – all
+          Collect your web snippets, Kindle highlights and important links - all
           in one place. <br /> Then quickly find them again from any device.
         </p>
       </div>
       <div className="research-cards flex md:flex-row justify-center flex-col items-center">
-        <div className="research-card">
+        <div className="research-card relative animate-fade-in border-r border-r-[#ffffff3d] p-[24px_32px_36px] backdrop-blur-sm transition-all duration-300  cursor-pointer 
+      hover:shadow-xl hover:bg-gradient-to-t from-[#030115] via-[#100D20] to-[#2C2A3D]
+      before:content-[''] before:absolute before:w-[3px] before:h-[16px] before:right-[-2px] before:top-[80px] before:bg-[#ffffff3d]"
+ >
           <svg
             width="40"
             height="40"

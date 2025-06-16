@@ -12,6 +12,8 @@ module.exports = {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         rotate: "rotate 10s linear infinite", // ⬅️ Added rotate animation
+         'spin-slow': 'spin 20s linear infinite',
+        'spin-reverse-slower': 'spin-reverse 40s linear infinite',
       },
       keyframes: {
         scroll: {
@@ -26,6 +28,10 @@ module.exports = {
           to: {
             transform: "rotate(360deg)",
           },
+        },
+        'spin-reverse': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' },
         },
       },
      
