@@ -47,7 +47,7 @@ const steps = [
   "Scalable: Increase or decrease your retainer as your needs change",
 ];
 
-export default function Pricing() {
+const Pricing=()=> {
   const [selectedTier, setSelectedTier] = useState("Zen Pace");
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [viewMode, setViewMode] = useState("fixed");
@@ -215,3 +215,4 @@ export default function Pricing() {
     </div>
   );
 }
+export default Pricing
