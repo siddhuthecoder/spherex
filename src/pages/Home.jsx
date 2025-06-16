@@ -14,6 +14,7 @@ import Testimonals from "../accernity/Testimonals";
 import Academy from "../components/Academy";
 import Otherapps from "../components/Otherapps";
 import NeverLoose from "../components/NeverLoose";
+import FAQ from "../components/FAQ";
 import Test from "../components/Test";
 const Home = () => {
   const location = useLocation();
@@ -66,6 +67,9 @@ const Home = () => {
       </div>
       <div>
         <Pricing />
+      </div>
+      <div>
+        <FAQ />
       </div>
       <div>
         <Testimonals/>
