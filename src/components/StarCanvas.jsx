@@ -5,9 +5,9 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import { div } from "three/tsl";
 
-const PARTICLE_COUNT = 100;
-const SPAWN_RADIUS = 10;
-const SPEED = 0.005;
+const PARTICLE_COUNT = 700;
+const SPAWN_RADIUS = 1000;
+const SPEED = 0.008;
 
 const StarBackground = () => {
   const ref = useRef();
@@ -65,24 +65,35 @@ const StarBackground = () => {
 
     ref.current.geometry.attributes.position.needsUpdate = true;
   });
+  const groupRef = useRef();
+
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.0015; // adjust speed if needed
+      groupRef.current.rotation.x += 0.0005; // optional: multi-axis rotation
+    }
+  });
+
 
   return (
+     <group ref={groupRef}>
     <Points ref={ref} positions={positions} stride={3} frustumCulled>
       <PointMaterial
         transparent
         color="#ffffff"
-        size={0.04}
+        size={9}
         sizeAttenuation
         depthWrite={false}
       />
     </Points>
+  </group>
   );
 };
 
 const StarsCanvas = () => (
-  <div className="flex justify-center w-full h-full z-[20]">
-  <div className="absolute bottom-1/3 w-full md:w-[500px]  ">
-    <Canvas camera={{ position: [0, 0, 1] }}>
+  <div className="flex justify-center w-full h-full z-40">
+  <div className="absolute bottom-[50px] md:bottom-[120px] w-full md:w-[500px] ">
+    <Canvas camera={{ position: [0, 0, 5] }}>
       <Suspense fallback={null}>
         <StarBackground />
         <Preload all />

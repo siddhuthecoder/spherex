@@ -46,9 +46,9 @@ export const InfiniteMovingCards = ({
       if (speed === "fast") {
         containerRef.current.style.setProperty("--animation-duration", "20s");
       } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
+        containerRef.current.style.setProperty("--animation-duration", "150s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "100s");
       }
     }
   };
@@ -66,37 +66,39 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item, idx) => (
           <li
-            key={idx}
-            className="w-[350px] max-w-full relative rounded-2xl border flex-shrink-0 border-slate-900 px-8 py-6 md:w-[450px]"
-            style={{
-             
-              background: "linear-gradient(#000000)",
-
-            }}
-          >
+          key={idx}
+          style={{
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            background: `radial-gradient(57.89% 132% at 65.79% -35%, rgba(120, 123, 255, 0.06) 0%, rgba(120, 123, 255, 0) 100%), 
+                         linear-gradient(180deg, rgba(255, 255, 255, 0) 54.17%, rgba(255, 255, 255, 0.04) 100%), 
+                         rgba(255, 255, 255, 0.01)`
+          }}
+          className="w-[350px] max-w-full relative rounded-2xl border flex-shrink-0 border-slate-900 p-[24px_28px] md:w-[450px]"
+        >
             <blockquote>
               <div
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
               
-              
-              <span className="relative z-20 text-md leading-[1.6] text-[black] font-bold">
-                {item.quote}
-              </span>
-              <div className="flex flex-row gap-[10px]  items-center">
+              <div className="flex flex-row gap-[10px]  items-center mb-[24px]">
               <div><img src={item.person} className=" h-[50px] w-[50px] rounded-[50%] mt-[20px]"/></div>
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <span className="text-sm leading-[1.6] text-[black] font-normal">
+                  <span className="text-sm leading-[1.6] text-[#f4f0ff] font-normal">
                     {item.name}
                   </span>
-                  <span className="text-sm leading-[1.6] text-[black] font-normal">
+                  <span className="text-sm leading-[1.6] text-[#efedfd99] font-normal">
                     {item.title}
                   </span>
                 </span>
               </div>
               </div>
+              <span className="relative z-20 text-md leading-[1.6] text-[#efedfdb3]">
+                {item.description}
+              </span>
+          
             </blockquote>
           </li>
         ))}

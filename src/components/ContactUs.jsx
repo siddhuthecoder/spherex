@@ -7,29 +7,32 @@ const ContactUs = () => {
       <div className="w-full max-w-6xl flex flex-col md:flex-row gap-10 items-center">
 
         {/* Left Side */}
-        <div className="flex flex-col mx-8 justify-center ">
-          
-          <p className="text-gray-400 text-left mb-8">
-            We are committed to processing the information in order to contact you and talk about your project.
-          </p>
+        <div className="flex flex-col md:mx-4 sm:mx-8 py-16 px-4 sm:px-6 backdrop-blur saturate-150 rounded-2xl shadow-xl border-[1px] border-gray-700">
+  <p className="text-gray-300 text-left mb-6 leading-relaxed text-base sm:text-lg">
+    We are committed to processing the information in order to contact you and talk about your project.
+  </p>
 
-          <div className="space-y-6">
-            <div className="flex items-center gap-6">
-              <span role="img" aria-label="email">📧</span>
-              <span className="text-gray-400">example@teamwebflow.com</span>
-            </div>
+  <div className="space-y-6">
+    <div className="flex items-start gap-4">
+      <span className="text-2xl">📧</span>
+      <span className="text-gray-300 break-all">example@teamwebflow.com</span>
+    </div>
 
-            <div className="flex items-center gap-3">
-              <span role="img" aria-label="address">📍</span>
-              <span className="text-gray-400">4074 Ebert Summit Suite 375<br/>Lake Leonardschester</span>
-            </div>
+    <div className="flex items-start gap-4">
+      <span className="text-2xl">📍</span>
+      <span className="text-gray-300">
+        4074 Ebert Summit Suite 375<br />
+        Lake Leonardschester
+      </span>
+    </div>
 
-            <div className="flex items-center gap-3">
-              <span role="img" aria-label="phone">📱</span>
-              <span className="text-gray-400">+44 123 654 7890</span>
-            </div>
-          </div>
-        </div>
+    <div className="flex items-start gap-4">
+      <span className="text-2xl">📱</span>
+      <span className="text-gray-300">+44 123 654 7890</span>
+    </div>
+  </div>
+</div>
+
 
         {/* Right Side - Form */}
         <form className=" space-y-4">
