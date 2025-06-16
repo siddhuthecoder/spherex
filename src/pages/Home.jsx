@@ -15,6 +15,9 @@ import Otherapps from "../components/Otherapps";
 import NeverLoose from "../components/NeverLoose";
 import FAQ from "../components/FAQ";
 import Test from "../components/Test";
+import HowWeWork from "../components/HowWeWork";
+import HowWeCanElevate from "../components/HowWeCanElevate";
+import Approach from "../components/Approach/Approach"
 const Home = () => {
   const location = useLocation();
 
@@ -54,6 +57,9 @@ const Home = () => {
         <Features />
       </div>
         
+     <div><Approach/></div>
+     <div><HowWeCanElevate/></div>
+     <div><HowWeWork/></div>
       <div>
         <NeverLoose/>
 
