@@ -10,6 +10,9 @@ import About from "./About";
 import Pricing from "../components/Pricing";
 import ContactUs from "../components/ContactUs";
 import Testimonals from "../accernity/Testimonals";
+import HowWeCanElevate from "../components/HowWeCanElevate";
+import Approach from "../components/Approach/Approach"
+import HowWeWork from "../components/HowWeWork";
 const Home = () => {
   const location = useLocation();
 
@@ -41,12 +44,17 @@ const Home = () => {
       <div ref={homeRef}>
         <Hero />
       </div>
-      <div ref={aboutRef}>
+     
+      {/* <div ref={aboutRef}>
         <About />
-      </div>
+      </div> */}
+       
       <div ref={servicesRef}>
         <Features />
       </div>
+       <div><HowWeCanElevate/></div>
+       <div><Approach/></div>
+       <div><HowWeWork/></div>
       <div ref={projectsRef}>
         <ReflectFeatures />
       </div>
