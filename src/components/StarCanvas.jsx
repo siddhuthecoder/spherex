@@ -6,7 +6,7 @@ import { Points, PointMaterial, Preload } from "@react-three/drei";
 import { div } from "three/tsl";
 
 const PARTICLE_COUNT = 700;
-const SPAWN_RADIUS = 20;
+const SPAWN_RADIUS = 1000;
 const SPEED = 0.008;
 
 const StarBackground = () => {
@@ -76,22 +76,24 @@ const StarBackground = () => {
 
 
   return (
+     <group ref={groupRef}>
     <Points ref={ref} positions={positions} stride={3} frustumCulled>
       <PointMaterial
         transparent
         color="#ffffff"
-        size={0.03}
+        size={9}
         sizeAttenuation
         depthWrite={false}
       />
     </Points>
+  </group>
   );
 };
 
 const StarsCanvas = () => (
-  <div className="flex justify-center w-full h-full z-[20]">
-  <div className="absolute bottom-[100px] w-full md:w-[500px] ">
-    <Canvas camera={{ position: [0, 0, 1] }}>
+  <div className="flex justify-center w-full h-full z-40">
+  <div className="absolute bottom-[50px] md:bottom-[120px] w-full md:w-[500px] ">
+    <Canvas camera={{ position: [0, 0, 5] }}>
       <Suspense fallback={null}>
         <StarBackground />
         <Preload all />

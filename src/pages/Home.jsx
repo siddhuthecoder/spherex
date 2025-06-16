@@ -41,7 +41,7 @@ const Home = () => {
   }, [location]);
 
   return (
-    <div className="bg-[#020012] min-h-screen w-full text-white  scroll-smooth font-jost">
+    <div className="bg-[#030014] min-h-screen w-full text-white  scroll-smooth font-jost">
       <Navbar />
       <div ref={homeRef}>
         <Hero />

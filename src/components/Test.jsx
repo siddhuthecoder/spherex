@@ -31,15 +31,15 @@ const DotCircle = ({ className, size }) => {
 
 const Test = () => {
   return (
-    <div className="w-full  overflow-hidden flex items-center justify-center  text-white absolute top-16 mt-[150px]  z-20">
-      <div className="">
-        <div className="black-hole-circles ">
-          <DotCircle className="hero-black-hole-circle-0" size={650} />
-          <DotCircle className="hero-black-hole-circle-1" size={500} />
-          <DotCircle className="hero-black-hole-circle-2" size={350} />
-        </div>
-      </div>
-    </div>
+    <div className="w-full  overflow-hidden hidden  md:flex items-center justify-center text-white absolute top-16 mt-[150px] z-20">
+  {/* 🟢 Only this wrapper should have the mask */}
+  <div className="black-hole-circles mask-circle gradient-mask-outer">
+    <DotCircle className="hero-black-hole-circle-0" size={650} />
+    <DotCircle className="hero-black-hole-circle-1" size={500} />
+    <DotCircle className="hero-black-hole-circle-2" size={350} />
+  </div>
+</div>
+
   );
 };
 

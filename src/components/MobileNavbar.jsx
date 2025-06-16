@@ -12,7 +12,7 @@ const MobileNavbar = ({isOpen,setIsOpen}) => {
       className={`fixed top-0 left-0 w-full h-full z-50 
         text-white transition-all duration-500 ease-in-out 
         ${isOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'} 
-        backdrop-blur-lg`}
+        bg-[#030014] bg-opacity-90 backdrop-blur-xl`}
     >
       {/* Header */}
       <div className="flex items-center justify-between p-4 py-6 border-b border-[#ffffff15]">
@@ -20,9 +20,9 @@ const MobileNavbar = ({isOpen,setIsOpen}) => {
           <img
             src="logo.png"
             alt="logo"
-            className="w-6 h-6"
+            className="w-9 h-9"
           />
-          <span className="text-lg font-semibold">Reflect</span>
+          <span className="text-lg font-medium">SphereX</span>
         </div>
         <div className="flex gap-4 items-center">
           <button className="text-md font-medium">Login</button>
@@ -42,12 +42,12 @@ const MobileNavbar = ({isOpen,setIsOpen}) => {
       </div>
 
       {/* Menu Items */}
-      <div className="flex flex-col gap-6 mt-6 ">
-      <Link to='/#home' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Home</Link>
-      <Link to='/#about' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">About Us</Link>
-      <Link to='/#services' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Services</Link>
-      <Link to='/#projects' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Projects</Link>
-      <Link to='/#contact' className="hover:text-purple-400 border-b-[1px] p-3 text-2xl">Contact</Link>
+      <div className="flex flex-col gap-6 mt-2  ">
+      <Link to='/#home' className="hover:text-purple-400 border-b-[1px] border-[rgba(255,255,255,0.1)] px-8 py-3 text-2xl">Home</Link>
+      <Link to='/#about' className="hover:text-purple-400 border-b-[1px] border-[rgba(255,255,255,0.1)] px-8 py-3 text-2xl">About Us</Link>
+      <Link to='/#services' className="hover:text-purple-400 border-b-[1px] border-[rgba(255,255,255,0.1)] px-8 py-3 text-2xl">Services</Link>
+      <Link to='/#projects' className="hover:text-purple-400 border-b-[1px] border-[rgba(255,255,255,0.1)] px-8 py-3 text-2xl">Projects</Link>
+      <Link to='/#contact' className="hover:text-purple-400 border-b-[1px] border-[rgba(255,255,255,0.1)] px-8 py-3 text-2xl">Contact</Link>
       </div>
     </div>
   </div>
