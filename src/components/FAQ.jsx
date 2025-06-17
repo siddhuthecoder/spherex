@@ -19,7 +19,7 @@ const faqData = [
   },
 ];
 
-const FAQ=()=> {
+const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (index) => {
@@ -28,27 +28,28 @@ const FAQ=()=> {
 
   return (
     <section className="bg-black text-white py-12 px-4 sm:px-8 lg:px-20">
-      <h2 className="text-4xl  text-center mb-8 text-purple-200">
+      <h2 className="text-4xl text-center mb-10 text-purple-300 drop-shadow-[0_2px_4px_rgba(168,85,247,0.7)]">
         Frequently Asked Questions
       </h2>
 
-      <div className="max-w-4xl mx-auto space-y-4">
+      <div className="max-w-4xl mx-auto space-y-5">
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="border border-purple-700 rounded-xl  bg-opacity-80"
+            className="border border-purple-600 bg-white/5 backdrop-blur-md rounded-2xl shadow-md transition-all duration-300"
           >
             <button
               onClick={() => toggle(index)}
-              className="w-full flex justify-between items-center px-6 py-4 text-left text-white  rounded-t-xl transition-all duration-300"
+              className="w-full flex justify-between items-center px-6 py-4 text-left rounded-t-xl text-white font-semibold text-lg drop-shadow-[0_1px_2px_rgba(255,255,255,0.25)]"
             >
-              <span className="font-semibold text-lg">{item.question}</span>
-              <span className="text-2xl">
+              <span>{item.question}</span>
+              <span className="text-2xl text-purple-400">
                 {openIndex === index ? "−" : "+"}
               </span>
             </button>
+
             {openIndex === index && (
-              <div className="px-6 py-3 text-purple-100 border-t border-purple-700 bg-purple-900 text-sm transition-all duration-500">
+              <div className="px-6 py-4 text-sm text-purple-100 bg-purple-900/50 border-t border-purple-700 rounded-b-2xl transition-all duration-500">
                 {item.answer}
               </div>
             )}
@@ -57,5 +58,6 @@ const FAQ=()=> {
       </div>
     </section>
   );
-}
-export default FAQ
+};
+
+export default FAQ;
