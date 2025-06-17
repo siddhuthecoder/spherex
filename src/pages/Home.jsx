@@ -61,17 +61,17 @@ const Home = () => {
      <div><Approach/></div>
      <div><HowWeCanElevate/></div>
      <div><HowWeWork/></div>
-     <div><FlexibleDevelopment/></div>
-      <div>
+     <FlexibleDevelopment/>
+      {/* <div>
         <NeverLoose/>
 
-      </div>
+      </div> */}
       <div ref={projectsRef}>
         <ReflectFeatures />
       </div>
-      <div>
+      {/* <div>
         <Otherapps />
-      </div>
+      </div> */}
       <div>
         <Pricing />
       </div>
@@ -81,9 +81,9 @@ const Home = () => {
       <div>
         <Testimonals/>
       </div>
-      <div>
+      {/* <div>
         <Academy/>
-      </div>
+      </div> */}
       <div ref={contactRef} className="py-20 text-center">
        
         <ContactUs/>

@@ -16,9 +16,9 @@ const Footer=()=> {
       <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-10">
         {/* Logo and Intro */}
         <div className="md:col-span-2">
-          <h2 className="text-2xl font-bold text-white mb-4">Reflect</h2>
-          <p className="mb-4 text-sm">
-            Reflect is a full-service digital agency specializing in web and mobile development, and cutting-edge technology solutions.
+          <h2 className="text-2xl font-bold text-white mb-4">Spherex</h2>
+          <p className="mb-4 text-md">
+            Spherex is a full-service digital agency specializing in web and mobile development, and cutting-edge technology solutions.
           </p>
           <div className="flex gap-4 mb-4 text-xl">
             <a href="#"><FaTwitter /></a>
