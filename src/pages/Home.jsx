@@ -59,13 +59,13 @@ const Home = () => {
      {/* <div><HowWeCanElevate/></div> */}
      <div><HowWeWork/></div>
      <div><FlexibleDevelopment/></div>
-      <div><NeverLoose/></div>
+      {/* <div><NeverLoose/></div> */}
       <div ref={projectsRef}>
         <ReflectFeatures />
       </div>
-      <div>
+      {/* <div>
         <Otherapps />
-      </div>
+      </div> */}
       <div>
         <Pricing />
       </div>
@@ -75,9 +75,9 @@ const Home = () => {
       <div>
         <Testimonals/>
       </div>
-      <div>
+      {/* <div>
         <Academy/>
-      </div>
+      </div> */}
       <div ref={contactRef} className="py-20 text-center">
        
         <ContactUs/>
