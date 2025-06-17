@@ -35,46 +35,47 @@ const HowWeWork = () => {
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[black]">
-      <div className="max-w-3xl mx-auto">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 min-h-screen bg-[black] font-jost relative">
+      <div className="max-w-4xl mx-auto">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-white uppercase mb-4">
-          How We Work
+        <h2 className="md:text-5xl text-[30px] font-extrabold mb-12 flex items-center justify-center text-center bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent animate-scale-in tracking-tight drop-shadow-lg transition-all duration-500 hover:scale-105">
+          <span className="md:mr-1 text-[30px] md:text-4xl text-purple-400 transition-transform duration-500 hover:rotate-12">🚀</span> How We Work
         </h2>
 
         {/* Description */}
-        <p className="text-white text-base sm:text-lg mb-12">
-          <span className="text-purple-700 font-medium">
+        <p className="text-gray-300 text-base sm:text-lg mb-12 text-center animate-fade-in transition-all duration-500 hover:text-purple-300">
+          <span className="text-purple-400 font-medium">
             Our structured development process delivers consistent results through clear phases and transparent collaboration.
           </span>{" "}
           We break complex projects into manageable steps, ensuring quality at every stage while maintaining open communication throughout.
         </p>
 
         {/* Steps */}
-        <div className="relative">
+        <div className="relative grid grid-cols-1 gap-8">
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="flex items-start mb-12 last:mb-0 relative"
+              className="flex items-start relative animate-fade-in border-l-4 border-l-[#ffffff3d] p-6 backdrop-blur-md bg-[#100D20]/40 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 cursor-pointer hover:bg-gradient-to-b from-[#030115] via-[#100D20] to-[#2C2A3D]"
+              style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Timeline Circle and Line */}
               <div className="flex flex-col items-center mr-6">
                 {/* Circle with Number */}
-                <div className="w-10 h-10 flex items-center justify-center rounded-full border-2 border-purple-700 bg-purple-700 text-white font-bold text-lg z-10">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-purple-400 bg-purple-700 text-white font-bold text-xl z-10 transition-transform duration-300 hover:scale-110">
                   {step.number}
                 </div>
                 {/* Connecting Line (not for the last step) */}
                 {index < steps.length - 1 && (
-                  <div className="absolute top-10 left-5 w-0.5 h-[calc(100%-2.5rem)] bg-purple-500" />
+                  <div className="absolute top-12 left-6 w-0.5 h-[calc(100%-3rem)] bg-gradient-to-b from-purple-500 to-transparent" />
                 )}
               </div>
 
               {/* Step Content */}
               <div className="flex-1">
-                <h3 className="text-xl sm:text-2xl font-bold text-white uppercase mb-2">
+                <h3 className="text-2xl sm:text-3xl font-bold text-white uppercase mb-3 animate-slide-in tracking-wide drop-shadow-md transition-all duration-300 hover:text-purple-300">
                   {step.title}
                 </h3>
-                <p className="text-white text-base sm:text-lg">
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed tracking-wide transition-all duration-300 hover:translate-x-2 hover:text-purple-300">
                   {step.description}
                 </p>
               </div>
