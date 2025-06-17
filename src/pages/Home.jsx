@@ -18,6 +18,7 @@ import Test from "../components/Test";
 import HowWeWork from "../components/HowWeWork";
 import HowWeCanElevate from "../components/HowWeCanElevate";
 import Approach from "../components/Approach/Approach"
+import FlexibleDevelopment from "../components/FlexibleDevelopment";
 const Home = () => {
   const location = useLocation();
 
@@ -60,6 +61,7 @@ const Home = () => {
      <div><Approach/></div>
      <div><HowWeCanElevate/></div>
      <div><HowWeWork/></div>
+     <div><FlexibleDevelopment/></div>
       <div>
         <NeverLoose/>
 
