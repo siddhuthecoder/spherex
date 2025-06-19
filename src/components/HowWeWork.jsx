@@ -55,7 +55,7 @@ const HowWeWork = () => {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className="flex items-start relative animate-fade-in border-l-4 border-l-[#ffffff3d] p-6 backdrop-blur-md bg-[#100D20]/40 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 cursor-pointer hover:bg-gradient-to-b from-[#030115] via-[#100D20] to-[#2C2A3D]"
+              className="flex items-start relative animate-fade-in  p-6 backdrop-blur-md bg-[#100D20]/40 rounded-xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 cursor-pointer hover:bg-gradient-to-b from-[#030115] via-[#100D20] to-[#2C2A3D]"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Timeline Circle and Line */}
