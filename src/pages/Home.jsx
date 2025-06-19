@@ -54,15 +54,15 @@ const Home = () => {
         <About />
       </div> */}
      
-      <div ref={servicesRef}><Features /></div>
+      {/*<div ref={servicesRef}><Features /></div>*/}
      <div><Approach/></div>
      {/* <div><HowWeCanElevate/></div> */}
      <div><HowWeWork/></div>
      <div><FlexibleDevelopment/></div>
       {/* <div><NeverLoose/></div> */}
-      <div ref={projectsRef}>
+      {/* <div ref={projectsRef}>
         <ReflectFeatures />
-      </div>
+      </div> */}
       {/* <div>
         <Otherapps />
       </div> */}
@@ -78,10 +78,10 @@ const Home = () => {
       {/* <div>
         <Academy/>
       </div> */}
-      <div ref={contactRef} className="py-20 text-center">
+      {/* <div ref={contactRef} className="py-20 text-center">
        
         <ContactUs/>
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
