@@ -29,7 +29,7 @@ const Hero = () => {
   // };
 
   return (
-    <div className="hero relative w-full md:h-[633px] font-jost overflow-hidden">
+    <div className="hero relative w-full md:h-screen  font-jost overflow-hidden">
       {/* Centered Heading */}
       <div className="hero-content overflow-hidden w-full py-[100px]  md:py-[150px] flex justify-center items-center flex-col text-center px-4 z-40 md:mt-[50px]">
         <div className="hero-badge   flex gap-2">
