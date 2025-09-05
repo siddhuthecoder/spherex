@@ -1,11 +1,67 @@
-import { motion } from 'framer-motion';
-import { BuildingOfficeIcon, RocketLaunchIcon, LightBulbIcon, UserGroupIcon } from '@heroicons/react/24/outline';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import { useEffect, useState } from 'react';
+import { 
+  BuildingOfficeIcon, 
+  RocketLaunchIcon, 
+  LightBulbIcon, 
+  UserGroupIcon,
+  CodeBracketIcon,
+  ChartBarIcon,
+  DevicePhoneMobileIcon,
+  ServerStackIcon,
+  SparklesIcon,
+  ShieldCheckIcon,
+  ArrowRightIcon,
+  PlayIcon
+} from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom';
+import Lottie from 'lottie-react';
+import logoAnimation from '../components/animations/logo.json';
+
+// Animation variants
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.5 }
+  }
+};
 
 const stats = [
-  { label: 'Projects Completed', value: '250+' },
-  { label: 'Happy Clients', value: '150+' },
-  { label: 'Team Members', value: '50+' },
-  { label: 'Years of Experience', value: '8+' },
+  { 
+    label: 'Projects Completed', 
+    value: '250+',
+    icon: CodeBracketIcon,
+    color: 'from-blue-500 to-cyan-400'
+  },
+  { 
+    label: 'Happy Clients', 
+    value: '150+',
+    icon: SparklesIcon,
+    color: 'from-purple-500 to-pink-500'
+  },
+  { 
+    label: 'Team Members', 
+    value: '50+',
+    icon: UserGroupIcon,
+    color: 'from-amber-500 to-yellow-400'
+  },
+  { 
+    label: 'Years of Experience', 
+    value: '8+',
+    icon: ShieldCheckIcon,
+    color: 'from-emerald-500 to-teal-400'
+  },
 ];
 
 const values = [
@@ -13,50 +69,33 @@ const values = [
     name: 'Innovation',
     description: 'We embrace change and constantly seek innovative solutions to complex problems.',
     icon: LightBulbIcon,
+    color: 'text-blue-500 bg-blue-50 dark:bg-blue-900/20',
+    delay: 0.1
   },
   {
     name: 'Excellence',
     description: 'We are committed to delivering exceptional quality in everything we do.',
     icon: RocketLaunchIcon,
+    color: 'text-purple-500 bg-purple-50 dark:bg-purple-900/20',
+    delay: 0.2
   },
   {
     name: 'Collaboration',
     description: 'We believe in the power of teamwork and building strong partnerships.',
     icon: UserGroupIcon,
+    color: 'text-amber-500 bg-amber-50 dark:bg-amber-900/20',
+    delay: 0.3
   },
   {
     name: 'Integrity',
     description: 'We conduct our business with honesty, transparency, and ethical practices.',
     icon: BuildingOfficeIcon,
+    color: 'text-emerald-500 bg-emerald-50 dark:bg-emerald-900/20',
+    delay: 0.4
   },
 ];
 
-const teamMembers = [
-  {
-    name: 'Alex Johnson',
-    role: 'CEO & Founder',
-    image: 'https://randomuser.me/api/portraits/men/1.jpg',
-    bio: 'Visionary leader with over 15 years of experience in technology and business strategy.'
-  },
-  {
-    name: 'Sarah Williams',
-    role: 'CTO',
-    image: 'https://randomuser.me/api/portraits/women/1.jpg',
-    bio: 'Technology expert specializing in software architecture and emerging technologies.'
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Lead Designer',
-    image: 'https://randomuser.me/api/portraits/men/2.jpg',
-    bio: 'Creative designer passionate about creating intuitive and beautiful user experiences.'
-  },
-  {
-    name: 'Emily Rodriguez',
-    role: 'Senior Developer',
-    image: 'https://randomuser.me/api/portraits/women/2.jpg',
-    bio: 'Full-stack developer with expertise in modern web technologies and cloud solutions.'
-  },
-];
+
 
 const About = () => {
   return (
@@ -72,7 +111,7 @@ const About = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold mb-6">About SphereX</h1>
-            <p className="text-xl text-white/90">
+            <p className="text-xl ">
               We are a team of passionate technologists dedicated to helping businesses thrive in the digital age through innovative solutions.
             </p>
           </motion.div>
@@ -111,7 +150,20 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <div className="bg-gray-200 rounded-xl aspect-video"></div>
+              <div className="p-3 flex items-center justify-center">
+                <Lottie 
+                  animationData={logoAnimation}
+                  loop={true}
+                  autoplay={true}
+                  rendererSettings={{
+                    preserveAspectRatio: 'xMidYMid slice'
+                  }}
+                  style={{ width: '100%', height: '400px', maxWidth: '400px' }}
+                  onComplete={() => {}}
+                  onLoopComplete={() => {}}
+                  isPaused={false}
+                />
+              </div>
             </motion.div>
             <motion.div 
               className="md:w-1/2"
@@ -175,69 +227,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <span className="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">Our Team</span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Leadership</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">The talented individuals behind our success.</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div 
-                key={member.name}
-                className="bg-white rounded-xl overflow-hidden shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
-                <div className="h-64 bg-gray-200">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p className="text-primary font-medium mb-3">{member.role}</p>
-                  <p className="text-gray-600 text-sm">{member.bio}</p>
-                  <div className="flex space-x-3 mt-4">
-                    <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                      <span className="sr-only">LinkedIn</span>
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                      </svg>
-                    </a>
-                    <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                      <span className="sr-only">Twitter</span>
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <div className="text-center mt-16">
-            <h3 className="text-2xl font-bold mb-4">Want to join our team?</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about technology and innovation.
-            </p>
-            <button className="btn btn-primary">
-              View Open Positions
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-dark text-white">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary-white text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">

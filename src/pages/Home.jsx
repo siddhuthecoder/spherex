@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRightIcon, ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import HowWeWork from '../components/HowWeWork';
 import OurApproach from '../components/OurApproach';
-
+import Pricing from '../pages/Pricing';
+import FAQList from '../components/Faq';
+import IntegrationsHero from '../components/IntegrationHero';
 // Sample data - replace with actual data
 const services = [
   {
@@ -37,44 +40,44 @@ const services = [
   },
 ];
 
-const approachSteps = [
-  {
-    step: '01',
-    title: 'Discovery',
-    lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
-    description: 'We start by understanding your business goals, target audience, and project requirements through in-depth discussions and research.',
-  },
-  {
-    step: '02',
-    title: 'Planning',
-    lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
-    description: 'Our team creates a detailed project plan, including timelines, milestones, and technology stack recommendations.',
-  },
-  {
-    step: '03',
-    title: 'Design',
-    lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
-    description: 'We design intuitive user interfaces and experiences that align with your brand and engage your users.',
-  },
-  {
-    step: '04',
-    title: 'Development',
-    lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
-    description: 'Our developers bring the design to life using best practices and modern technologies.',
-  },
-  {
-    step: '05',
-    title: 'Testing',
-    lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
-    description: 'We conduct thorough testing to ensure the application is bug-free and performs optimally across devices.',
-  },
-  {
-    step: '06',
-    title: 'Launch & Support',
-    lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
-    description: 'We deploy your application and provide ongoing support and maintenance as needed.',
-  },
-];
+// const approachSteps = [
+//   {
+//     step: '01',
+//     title: 'Discovery',
+//     lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
+//     description: 'We start by understanding your business goals, target audience, and project requirements through in-depth discussions and research.',
+//   },
+//   {
+//     step: '02',
+//     title: 'Planning',
+//     lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
+//     description: 'Our team creates a detailed project plan, including timelines, milestones, and technology stack recommendations.',
+//   },
+//   {
+//     step: '03',
+//     title: 'Design',
+//     lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
+//     description: 'We design intuitive user interfaces and experiences that align with your brand and engage your users.',
+//   },
+//   {
+//     step: '04',
+//     title: 'Development',
+//     lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
+//     description: 'Our developers bring the design to life using best practices and modern technologies.',
+//   },
+//   {
+//     step: '05',
+//     title: 'Testing',
+//     lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
+//     description: 'We conduct thorough testing to ensure the application is bug-free and performs optimally across devices.',
+//   },
+//   {
+//     step: '06',
+//     title: 'Launch & Support',
+//     lottie: 'https://lottie.host/21ffa21c-a6e5-4d1a-8194-e69c14312618/Zre31harid.lottie',
+//     description: 'We deploy your application and provide ongoing support and maintenance as needed.',
+//   },
+// ];
 
 const Home = () => {
   return (
@@ -238,9 +241,12 @@ const Home = () => {
         </div>
       </section> */}
       <OurApproach/>
-
+      <HowWeWork/>
+      <FAQList/>
+      <Pricing/>
+      <IntegrationsHero/>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-dark text-white">
+      <section className="py-20 bg-gradient-to-r from-primary to-primary-white text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">

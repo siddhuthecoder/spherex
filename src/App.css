@@ -8,6 +8,9 @@
   padding: 2rem;
   text-align: center;
 }
+body{
+  background-color: #f8f4f0;
+}
 
 .logo {
   height: 6em;

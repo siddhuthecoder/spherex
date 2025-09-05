@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,22 +18,19 @@ const Header = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { 
-      name: 'Services', 
-      path: '/services',
-      submenu: [
-        { name: 'Web Development', path: '/services/web-development' },
-        { name: 'Mobile App Development', path: '/services/mobile-app' },
-        { name: 'SaaS Applications', path: '/services/saas' },
-        { name: 'AI Solutions', path: '/services/ai' },
-        { name: 'Blockchain', path: '/services/blockchain' },
-        { name: 'UI/UX Design', path: '/services/ui-ux' },
-      ]
-    },
+    { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Pricing', path: '/pricing' },
+    // { name: 'Pricing', path: '/pricing' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  // Function to check if a link is active
+  const isActiveLink = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
 
   return (
     <header 
@@ -54,29 +52,20 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <div key={link.name} className="relative group">
-                <Link 
-                  to={link.path} 
-                  className="text-gray-700 hover:text-primary transition-colors font-medium"
-                >
-                  {link.name}
-                </Link>
-                {link.submenu && (
-                  <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="py-1">
-                      {link.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.path}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
+              <Link 
+                key={link.name}
+                to={link.path} 
+                className={`relative font-medium transition-colors duration-200 ${
+                  isActiveLink(link.path)
+                    ? 'text-primary'
+                    : 'text-gray-700 hover:text-primary'
+                }`}
+              >
+                {link.name}
+                {isActiveLink(link.path) && (
+                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"></span>
                 )}
-              </div>
+              </Link>
             ))}
             <Link 
               to="/get-proposal" 
@@ -115,29 +104,18 @@ const Header = () => {
         >
           <div className="flex flex-col space-y-4 mt-4">
             {navLinks.map((link) => (
-              <div key={link.name} className="border-b border-gray-100 pb-2">
-                <Link 
-                  to={link.path} 
-                  className="block py-2 text-gray-700 hover:text-primary"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.name}
-                </Link>
-                {link.submenu && isMenuOpen && (
-                  <div className="ml-4 mt-2 space-y-2">
-                    {link.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.path}
-                        className="block py-1 text-sm text-gray-600 hover:text-primary"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <Link 
+                key={link.name}
+                to={link.path} 
+                className={`block py-2 border-b border-gray-100 transition-colors duration-200 ${
+                  isActiveLink(link.path)
+                    ? 'text-primary font-semibold'
+                    : 'text-gray-700 hover:text-primary'
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
             ))}
             <Link 
               to="/get-proposal" 
