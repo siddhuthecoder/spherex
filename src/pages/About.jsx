@@ -99,7 +99,7 @@ const values = [
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#f0eee6] u-display-s">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32  text-white">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-30"></div>
@@ -140,7 +140,7 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 ">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <motion.div 

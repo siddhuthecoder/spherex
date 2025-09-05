@@ -112,7 +112,7 @@ const Projects = () => {
     };
     
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen u-display-s bg-[#f0eee6]">
           {/* Backdrop Pattern */}
           <div className="fixed inset-0 "></div>
           
@@ -415,7 +415,7 @@ const Projects = () => {
    }
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative u-display-s bg-[#f0eee6]">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 ">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80')] bg-cover bg-center opacity-30"></div>

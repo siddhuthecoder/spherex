@@ -129,7 +129,7 @@ const Pricing = () => {
               return (
                 <motion.div key={plan.name} className={`relative rounded-2xl overflow-hidden transition-all duration-300   border ${isSelected ? 'ring-2 ring-indigo-500 shadow-xl' : 'border-gray-100 shadow-sm'} ${plan.mostPopular ? 'md:-translate-y-4' : ''}`} whileHover={{ y: -6, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
                   {plan.mostPopular && (
-                    <div className="absolute  top-0 right-0 mt-2 transform -translate-x-1/2  bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-semibold uppercase tracking-wide py-2 px-6 rounded-full shadow-md ">Most Popular</div>
+                    <div className="absolute  top-0 right-0 mt-2 transform -translate-x-1/2  bg-black text-white text-xs font-semibold uppercase tracking-wide py-2 px-6 rounded-full shadow-md ">Most Popular</div>
                   )}
 
                   <div className="p-8">
@@ -145,7 +145,7 @@ const Pricing = () => {
                       {billingCycle === 'yearly' && (<div className="text-xs text-gray-400 line-through mt-1">${plan.price * 12}/year</div>)}
                     </div>
 
-                    <button onClick={() => setSelectedPlan(plan)} className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${isSelected ? 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-md' : plan.mostPopular ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-indigo-600 hover:to-purple-600 shadow-md' : 'bg-gray-50 text-gray-800 hover:bg-gray-100 border border-gray-200'}`}>
+                    <button onClick={() => setSelectedPlan(plan)} className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${isSelected ? 'bg-black text-white hover:bg-black shadow-md' : plan.mostPopular ? 'bg-gradient-to-r from-black text-white hover:from-white hover:to-black shadow-md' : 'bg-gray-50 text-gray-800 hover:bg-gray-100 border border-gray-200'}`}>
                       {isSelected ? 'Selected' : 'Select Plan'}
                     </button>
 
@@ -181,10 +181,10 @@ const Pricing = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 ">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-600 bg-indigo-50 rounded-full mb-4">Add-ons</span>
+            <span className="inline-block px-3 py-1 text-xs font-semibold text-indigo-600  rounded-full mb-4">Add-ons</span>
             <h2 className="text-3xl font-bold text-gray-900 mb-4 tracking-tight">Enhance Your Plan</h2>
             <p className="text-gray-500 text-sm leading-relaxed max-w-2xl mx-auto">Customize your plan with these powerful add-ons for a complete solution.</p>
           </div>
@@ -194,7 +194,7 @@ const Pricing = () => {
               const isSelected = selectedServices.some((s) => s.name === service.name);
 
               return (
-                <motion.div key={service.name} className={`border rounded-xl p-6 transition-all duration-300   ${isSelected ? 'border-indigo-500 bg-indigo-50/50 shadow-md' : 'border-gray-100 hover:border-indigo-200 hover:shadow-sm'}`} whileHover={{ y: -4, boxShadow: '0 6px 12px rgba(0,0,0,0.05)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1 }}>
+                <motion.div key={service.name} className={`border rounded-xl p-6 bg-white transition-all duration-300   ${isSelected ? 'border-indigo-500 bg-indigo-50/50 shadow-md' : 'border-gray-100 hover:border-indigo-200 hover:shadow-sm'}`} whileHover={{ y: -4, boxShadow: '0 6px 12px rgba(0,0,0,0.05)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1 }}>
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">{service.name}</h3>

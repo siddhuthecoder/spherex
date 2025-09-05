@@ -246,10 +246,10 @@ const Home = () => {
       <Pricing/>
       <IntegrationsHero/>
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-white text-white">
+      <section className="py-20 bg-gradient-to-r from-[#e7e3d2] to-primary-white ">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help you achieve your business goals with our expert solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -257,7 +257,7 @@ const Home = () => {
               Get in Touch
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </Link>
-            <Link to="/pricing" className="btn border-2 border-white text-white hover: /10">
+            <Link to="/pricing" className="btn border-2 border-white  hover: /10">
               View Pricing
             </Link>
           </div>

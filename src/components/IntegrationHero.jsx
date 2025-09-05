@@ -60,7 +60,7 @@ export default function IntegrationsHero() {
   const marqueeItems = [...icons, ...icons];
 
   return (
-    <section className="w-full py-12 px-6  ">
+    <section className="w-full py-12 px-6 u-display-s bg-[#f0eee6] ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center ">
         {/* LEFT: Text */}
         <div className="w-full lg:w-2/5">
