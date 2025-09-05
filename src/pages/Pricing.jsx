@@ -95,21 +95,21 @@ const Pricing = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-[#f0eee6] font-sans">
       {/* Hero + billing toggle (same as before) */}
       <section className="relative py-24 md:py-32 overflow-hidden ">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40')] bg-cover bg-center opacity-40"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div className="max-w-3xl mx-auto text-center" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: 'easeOut' }}>
-            <span className="inline-block px-4 py-1.5 text-xs font-semibold bg-white/10 backdrop-blur-md  rounded-full mb-6 border border-white/10 shadow-sm">Pricing Plans</span>
+            <span className="inline-block px-4 py-1.5 text-xs font-semibold  /10 backdrop-blur-md  rounded-full mb-6 border border-white/10 shadow-sm">Pricing Plans</span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Flexible Pricing for Every Business</h1>
             <p className="text-lg leading-relaxed max-w-2xl mx-auto">Discover plans tailored to your needs with transparent pricing and no hidden fees.</p>
 
-            <div className="mt-10 inline-flex items-center bg-white/10 backdrop-blur-md rounded-full p-1 border border-white/10 shadow-sm">
-              <button onClick={() => setBillingCycle('monthly')} className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${billingCycle === 'monthly' ? 'bg-white text-indigo-900 shadow-md' : 'text-white/80 hover:text-white hover:bg-white/10'}`}>
+            <div className="mt-10 inline-flex items-center  /10 backdrop-blur-md rounded-full p-1 border border-white/10 shadow-sm">
+              <button onClick={() => setBillingCycle('monthly')} className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${billingCycle === 'monthly' ? '  text-indigo-900 shadow-md' : 'text-white/80 hover:text-white hover: /10'}`}>
                 Monthly Billing
               </button>
-              <button onClick={() => setBillingCycle('yearly')} className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center ${billingCycle === 'yearly' ? 'bg-white text-indigo-900 shadow-md' : 'text-white/80 hover:text-white hover:bg-white/10'}`}>
+              <button onClick={() => setBillingCycle('yearly')} className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 flex items-center ${billingCycle === 'yearly' ? '  text-indigo-900 shadow-md' : 'text-white/80 hover:text-white hover: /10'}`}>
                 Yearly Billing
                 <span className="ml-2 bg-emerald-500 text-white text-xs px-2 py-0.5 rounded-full">Save 20%</span>
               </button>
@@ -127,7 +127,7 @@ const Pricing = () => {
               const price = billingCycle === 'yearly' ? Math.floor(plan.price * 12 * 0.8) : plan.price;
 
               return (
-                <motion.div key={plan.name} className={`relative rounded-2xl overflow-hidden transition-all duration-300 bg-white border ${isSelected ? 'ring-2 ring-indigo-500 shadow-xl' : 'border-gray-100 shadow-sm'} ${plan.mostPopular ? 'md:-translate-y-4' : ''}`} whileHover={{ y: -6, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
+                <motion.div key={plan.name} className={`relative rounded-2xl overflow-hidden transition-all duration-300   border ${isSelected ? 'ring-2 ring-indigo-500 shadow-xl' : 'border-gray-100 shadow-sm'} ${plan.mostPopular ? 'md:-translate-y-4' : ''}`} whileHover={{ y: -6, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
                   {plan.mostPopular && (
                     <div className="absolute  top-0 right-0 mt-2 transform -translate-x-1/2  bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-semibold uppercase tracking-wide py-2 px-6 rounded-full shadow-md ">Most Popular</div>
                   )}
@@ -194,7 +194,7 @@ const Pricing = () => {
               const isSelected = selectedServices.some((s) => s.name === service.name);
 
               return (
-                <motion.div key={service.name} className={`border rounded-xl p-6 transition-all duration-300 bg-white ${isSelected ? 'border-indigo-500 bg-indigo-50/50 shadow-md' : 'border-gray-100 hover:border-indigo-200 hover:shadow-sm'}`} whileHover={{ y: -4, boxShadow: '0 6px 12px rgba(0,0,0,0.05)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1 }}>
+                <motion.div key={service.name} className={`border rounded-xl p-6 transition-all duration-300   ${isSelected ? 'border-indigo-500 bg-indigo-50/50 shadow-md' : 'border-gray-100 hover:border-indigo-200 hover:shadow-sm'}`} whileHover={{ y: -4, boxShadow: '0 6px 12px rgba(0,0,0,0.05)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.3, delay: index * 0.1 }}>
                   <div className="flex justify-between items-start mb-4">
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900">{service.name}</h3>
@@ -216,7 +216,7 @@ const Pricing = () => {
 
       {/* Order Summary */}
       {(selectedPlan || selectedServices.length > 0) && (
-        <motion.div className="fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-100 z-10" initial={{ y: 100 }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
+        <motion.div className="fixed bottom-0 left-0 right-0   shadow-lg border-t border-gray-100 z-10" initial={{ y: 100 }} animate={{ y: 0 }} transition={{ type: 'spring', stiffness: 300, damping: 30 }}>
           <div className="container mx-auto px-4 py-4">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <div className="mb-4 md:mb-0">

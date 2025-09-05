@@ -12,7 +12,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
 import NotFound from './pages/NotFound';
-
+import "./font.css";
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -28,7 +28,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen u-display-s ">
       <Header />
       <ScrollToTop />
       <main className="flex-grow">

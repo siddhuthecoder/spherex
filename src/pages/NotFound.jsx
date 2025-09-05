@@ -29,7 +29,7 @@ const NotFound = () => {
             </Link>
             <button
               onClick={() => window.history.back()}
-              className="group relative w-full flex justify-center py-3 px-4 border border-gray-300 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="group relative w-full flex justify-center py-3 px-4 border border-gray-300 text-sm font-medium rounded-lg text-gray-700   hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
             >
               <ArrowLeftIcon className="h-5 w-5 mr-2 text-gray-400 group-hover:text-gray-500" />
               Go Back

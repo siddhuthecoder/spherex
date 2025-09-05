@@ -60,7 +60,7 @@ export default function IntegrationsHero() {
   const marqueeItems = [...icons, ...icons];
 
   return (
-    <section className="w-full py-12 px-6 bg-white">
+    <section className="w-full py-12 px-6  ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center ">
         {/* LEFT: Text */}
         <div className="w-full lg:w-2/5">
@@ -102,7 +102,7 @@ export default function IntegrationsHero() {
                     {marqueeItems.map((src, idx) => (
                       <div
                         key={idx + "-" + src}
-                        className="flex-shrink-0 w-32 h-32 bg-white rounded-xl shadow-[0_6px_0_rgba(91,42,145,0.18)] flex items-center justify-center p-3"
+                        className="flex-shrink-0 w-32 h-32   rounded-xl shadow-[0_6px_0_rgba(91,42,145,0.18)] flex items-center justify-center p-3"
                       >
                         <img
                           src={src}

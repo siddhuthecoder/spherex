@@ -139,7 +139,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 bg-white">
+      <section className="py-16  ">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((item, index) => {
@@ -184,7 +184,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div 
-              className="bg-white rounded-2xl p-8 shadow-lg"
+              className="  rounded-2xl p-8 shadow-lg"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -280,7 +280,7 @@ const Contact = () => {
             
             {/* Map */}
             <motion.div 
-              className="bg-white rounded-2xl overflow-hidden shadow-lg"
+              className="  rounded-2xl overflow-hidden shadow-lg"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -304,7 +304,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16  ">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block px-3 py-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full mb-4">FAQs</span>

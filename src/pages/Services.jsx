@@ -233,7 +233,7 @@ const Services = () => {
     const Icon = selectedService.icon;
     
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <div className="min-h-screen">
         <div className="container mx-auto px-6 py-12">
           {/* Back Button */}
           <motion.button 
@@ -274,7 +274,7 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 relative overflow-hidden">
+            <div className="  rounded-3xl p-12 shadow-xl border border-gray-100 relative overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-10 right-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
@@ -325,7 +325,7 @@ const Services = () => {
               </p>
             </div>
             
-            <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 relative overflow-hidden">
+            <div className="  rounded-3xl p-12 shadow-xl border border-gray-100 relative overflow-hidden">
               {/* Background Pattern */}
               <div className="absolute inset-0 opacity-5">
                 <div className="absolute top-20 left-20 w-40 h-40 bg-yellow-500 rounded-full blur-3xl"></div>
@@ -386,7 +386,7 @@ const Services = () => {
                           transition: { duration: 0.2 }
                         }}
                       >
-                        <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        <div className="w-16 h-16   rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-sm">
                           <img 
                             src={techLogos[tech] || `https://via.placeholder.com/64x64/4F46E5/FFFFFF?text=${tech.charAt(0)}`}
                             alt={tech}
@@ -414,7 +414,7 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 max-w-4xl mx-auto">
+            <div className="  rounded-3xl p-12 shadow-xl border border-gray-100 max-w-4xl mx-auto">
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
                 Ready to get started with <span className="text-yellow-500">{selectedService.title}</span>?
               </h3>
@@ -480,7 +480,7 @@ const Services = () => {
               return (
                 <motion.div 
                   key={service.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100"
+                  className="  rounded-2xl overflow-hidden shadow-lg border border-gray-100"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: false, margin: "-50px" }}
@@ -626,7 +626,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24  ">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

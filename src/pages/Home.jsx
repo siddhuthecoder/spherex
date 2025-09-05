@@ -81,12 +81,12 @@ const services = [
 
 const Home = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen u-display-s ">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-bg-[#f0eee6] to-transparent"></div>
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-30"></div>
         </div>
 
         <div className="container mx-auto px-4">
@@ -132,7 +132,7 @@ const Home = () => {
       </section>
 
       {/* Trusted By */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-[#f0eee6] ">
         <div className="container mx-auto px-4">
           <p className="text-center text-gray-500 mb-8">Trusted by innovative companies worldwide</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
@@ -146,7 +146,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
+      <section className="py-20 bg-[#f0eee6]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">
@@ -162,7 +162,7 @@ const Home = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="  rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 whileHover={{ y: -5 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -219,7 +219,7 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="lg:w-1/2 lg:px-8 mb-6 lg:mb-0">
-                  <div className="bg-white rounded-xl p-8 shadow-lg h-full">
+                  <div className="  rounded-xl p-8 shadow-lg h-full">
                     <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-2xl font-bold text-primary mb-4">
                       {step.step}
                     </div>
@@ -228,7 +228,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="lg:w-1/2 lg:px-8">
-                  <div className="bg-white rounded-xl overflow-hidden shadow-lg">
+                  <div className="  rounded-xl overflow-hidden shadow-lg">
                     <div className="aspect-w-16 aspect-h-9 bg-gray-100 flex items-center justify-center text-gray-400">
                    
                          <Lottie animationData={step.lottie} loop autoplay />
@@ -253,11 +253,11 @@ const Home = () => {
             Let's discuss how we can help you achieve your business goals with our expert solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact" className="btn bg-white text-primary hover:bg-gray-100">
+            <Link to="/contact" className="btn   text-primary hover:bg-gray-100">
               Get in Touch
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </Link>
-            <Link to="/pricing" className="btn border-2 border-white text-white hover:bg-white/10">
+            <Link to="/pricing" className="btn border-2 border-white text-white hover: /10">
               View Pricing
             </Link>
           </div>

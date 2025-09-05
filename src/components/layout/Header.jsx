@@ -36,7 +36,7 @@ const Header = () => {
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-md py-2' 
+          ? ' /95 backdrop-blur-md shadow-md py-5' 
           : 'bg-transparent py-4'
       }`}
     >
@@ -55,7 +55,7 @@ const Header = () => {
               <Link 
                 key={link.name}
                 to={link.path} 
-                className={`relative font-medium transition-colors duration-200 ${
+                className={`relative font-medium  text-[20px] transition-colors duration-200 ${
                   isActiveLink(link.path)
                     ? 'text-primary'
                     : 'text-gray-700 hover:text-primary'
@@ -69,7 +69,7 @@ const Header = () => {
             ))}
             <Link 
               to="/get-proposal" 
-              className="btn btn-primary ml-4"
+              className="text-[20px] bg-black hover:bg-[#490000] text-white p-2 rounded-md hover:text-white mx-8"
             >
               Get Proposal
             </Link>
@@ -119,7 +119,7 @@ const Header = () => {
             ))}
             <Link 
               to="/get-proposal" 
-              className="btn btn-primary w-full mt-4"
+              className=" w-full mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Proposal

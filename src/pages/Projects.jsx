@@ -145,7 +145,7 @@ const Projects = () => {
 
       {/* Icon Container */}
       <motion.div
-        className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/90 shadow-md border border-gray-100/50 mb-8 backdrop-blur-sm"
+        className="inline-flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-2xl  /90 shadow-md border border-gray-100/50 mb-8 backdrop-blur-sm"
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1], delay: 0.3 }}
@@ -216,7 +216,7 @@ const Projects = () => {
               ease: [0.16, 1, 0.3, 1]
             }}
           >
-            <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+            <div className="relative   rounded-2xl shadow-xl overflow-hidden border border-gray-100">
               <img 
                 src={selectedProject.image} 
                 alt={selectedProject.title}
@@ -258,7 +258,7 @@ const Projects = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
-                <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 sticky top-6">
+                <div className="  rounded-xl shadow-sm border border-gray-100 p-6 sticky top-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Project Details</h3>
                   <dl className="space-y-4">
                     <div>
@@ -304,7 +304,7 @@ const Projects = () => {
                 </p>
               </div>
               
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+              <div className="  rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                   {selectedProject.tags.map((tech, index) => {
                     const techLogos = {
@@ -352,7 +352,7 @@ const Projects = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: index * 0.05 }}
                       >
-                        <div className="flex-shrink-0 w-8 h-8 bg-white rounded-md flex items-center justify-center shadow-sm border border-gray-100">
+                        <div className="flex-shrink-0 w-8 h-8   rounded-md flex items-center justify-center shadow-sm border border-gray-100">
                           <img 
                             src={techLogos[tech] || 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg'} 
                             alt={tech}
@@ -393,14 +393,14 @@ const Projects = () => {
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <motion.a
                     href="/contact"
-                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50 shadow-sm transition-colors duration-200"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-gray-900   hover:bg-gray-50 shadow-sm transition-colors duration-200"
                     whileHover={{ y: -2, boxShadow: '0 10px 20px -5px rgba(0, 0, 0, 0.1)' }}
                   >
                     Get in Touch
                   </motion.a>
                   <motion.button
                     onClick={() => navigate('/projects')}
-                    className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-white bg-transparent hover:bg-white/10 transition-colors duration-200"
+                    className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-white bg-transparent hover: /10 transition-colors duration-200"
                     whileHover={{ y: -2 }}
                   >
                     View All Projects
@@ -452,7 +452,7 @@ const Projects = () => {
           <div className="w-full border-t border-gray-200"></div>
         </div>
         <div className="relative flex justify-center">
-          <div className="bg-white px-6">
+          <div className="  px-6">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
               <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
@@ -500,7 +500,7 @@ const Projects = () => {
                 {filteredProjects.slice(0, visibleProjects).map((project, index) => (
                   <motion.div 
                     key={project.id}
-                    className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                    className="  rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                     whileHover={{ y: -5 }}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -559,10 +559,10 @@ const Projects = () => {
             Let's discuss how we can help you bring your ideas to life with our expert services.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="btn bg-white text-primary hover:bg-gray-100">
+            <button className="btn   text-primary hover:bg-gray-100">
               Get a Free Quote
             </button>
-            <button className="btn border-2 border-white text-white hover:bg-white/10">
+            <button className="btn border-2 border-white text-white hover: /10">
               Contact Us
             </button>
           </div>

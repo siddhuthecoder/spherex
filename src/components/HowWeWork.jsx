@@ -7,8 +7,8 @@ import discoveryAnimation from "./animations/discover.json"; // Replace with act
 // import planningAnimation from "./animations/planning.json";
 import designAnimation from "./animations/design.json";
 // import developmentAnimation from "./animations/development.json";
-// import testingAnimation from "./animations/testing.json";
-// import launchAnimation from "./animations/launch.json";
+import supportAnimation from "./animations/support.json";
+import launchAnimation from "./animations/deployment.json";
 
 const approachSteps = [
   {
@@ -50,7 +50,7 @@ const approachSteps = [
   {
     step: "05",
     title: "Deployment",
-    lottie: discoveryAnimation,
+    lottie: launchAnimation,
     description:
       "Ensuring seamless transition to production with zero disruption to your business operations.",
     color: "from-yellow-500/20 to-yellow-500/5",
@@ -59,7 +59,7 @@ const approachSteps = [
   {
     step: "06",
     title: "Support",
-    lottie: discoveryAnimation,
+    lottie: supportAnimation,
     description:
       "Proactively maintaining and optimizing your solution to maximize business value and ROI.",
     color: "from-indigo-500/20 to-indigo-500/5",
@@ -90,7 +90,7 @@ const HowWeWork = () => {
   const fillHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <div className="relative py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white" ref={containerRef}>
+    <div className="relative py-16 lg:py-24 bg-[#f0eee6]" ref={containerRef}>
       <div className="container mx-auto px-4">
         <motion.div 
           className="text-center mb-16"
@@ -134,11 +134,11 @@ const HowWeWork = () => {
                 transition={{ duration: 0.7, delay: index * 0.15 }}
               >
                 {/* Timeline dot for large screens */}
-                <div className="hidden lg:block absolute left-1/2 -ml-3.5 top-1/2 -mt-3.5 w-7 h-7 rounded-full bg-white border-4 border-primary z-10 shadow-lg" />
+                <div className="hidden lg:block absolute left-1/2 -ml-3.5 top-1/2 -mt-3.5 w-7 h-7 rounded-full   border-4 border-primary z-10 shadow-lg" />
                 
                 <div className="lg:w-1/2 lg:px-8 mb-8 lg:mb-0">
                   <motion.div 
-                    className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full border border-gray-100"
+                    className="  rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full border border-gray-100"
                     whileHover={{ y: -5 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -164,18 +164,18 @@ const HowWeWork = () => {
                 
                 <div className="lg:w-1/2 lg:px-8">
                   <motion.div 
-                    className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                    className="  rounded-2xl overflow-hidden transition-all duration-300 "
                     whileHover={{ scale: 1.02 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="h-[280px] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center overflow-hidden">
+                    <div className="h-[350px]  flex items-center justify-center overflow-hidden">
                       {step.lottie ? (
                         <motion.div
                           initial={{ opacity: 0, scale: 0.9 }}
                           whileInView={{ opacity: 1, scale: 1 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                          className="h-full w-full"
+                          className="h-full w-full  hover:scale-[1.4]"
                         >
                           <Lottie
                             animationData={step.lottie}

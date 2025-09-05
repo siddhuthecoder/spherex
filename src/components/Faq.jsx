@@ -11,7 +11,7 @@ import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline';
 export const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <motion.div 
-      className="group relative bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 mb-6 overflow-hidden"
+      className="group relative   border border-gray-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 mb-6 overflow-hidden"
       whileHover={{ y: -8, scale: 1.02 }}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ const FAQList = ({ faqs: propFaqs }) => {
   const toggleFAQ = (i) => setOpenIndex(openIndex === i ? null : i);
 
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-[#f0eee6] relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-20 w-72 h-72 bg-blue-100/30 rounded-full blur-3xl"></div>
@@ -186,7 +186,7 @@ const FAQList = ({ faqs: propFaqs }) => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {/* Dashed Border Container */}
-          <div className="relative border-2 border-dashed border-gray-300 rounded-3xl p-8 md:p-12 bg-white/50 backdrop-blur-sm">
+          <div className="relative border-2 border-dashed border-gray-300 rounded-3xl p-8 md:p-12  /50 backdrop-blur-sm">
             {/* Animated border elements */}
             <motion.div 
               className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-blue-500/20"
