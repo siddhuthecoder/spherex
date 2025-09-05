@@ -85,14 +85,9 @@ export default function IntegrationsHero() {
           <div className="relative">
             {/* Blue rounded panel with slanted left edge */}
             <div
-              className="overflow-hidden rounded-2xl"
-              style={{
-                background: "#bfeeff", // soft blue
-                borderRadius: "16px",
-                padding: "28px 20px",
-                clipPath:
-                  "polygon(21% 1%, 100% 0%, 100% 100%, 0% 100%)", // create angled left edge
-              }}
+              className="overflow-hidden rounded-2xl bg-[#bfeeff] mt-[20px] md:mt-0 p-[28px_20px] 
+             md:[clip-path:polygon(21%_1%,100%_0%,100%_100%,0%_100%)]"
+              
             >
               {/* Marquee viewport */}
               <div className="relative w-full h-64">

@@ -408,37 +408,23 @@ const Services = () => {
           </motion.div>
 
           {/* CTA Section */}
-          <motion.div 
-            className="mt-20 text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            <div className="  rounded-3xl p-12 shadow-xl border border-gray-100 max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                Ready to get started with <span className="text-yellow-500">{selectedService.title}</span>?
-              </h3>
-              <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-                Contact us today to discuss your project and how we can help you achieve your goals with our {selectedService.title.toLowerCase()} services.
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-6">
-                <motion.button 
-                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-semibold rounded-xl hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get a Free Quote
-                </motion.button>
-                <motion.button 
-                  className="px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-gray-400 hover:text-gray-900 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Contact Our Team
-                </motion.button>
-              </div>
-            </div>
-          </motion.div>
+          <section className="py-20 bg-gradient-to-r from-[#e7e3d2] to-primary-white ">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's discuss how we can help you achieve your business goals with our expert solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link to="/contact" className="btn   text-primary hover:bg-gray-100">
+              Get in Touch
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </Link>
+            <Link to="/pricing" className="btn border-2 border-white  hover: /10">
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
         </div>
       </div>
     );
@@ -448,7 +434,7 @@ const Services = () => {
   return (
     <div className="min-h-screen u-display-s bg-[#f0eee6]">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 text-black">
+      {/* <section className="relative py-20 md:py-32 text-black">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80')] bg-cover bg-center opacity-30"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div 
@@ -463,8 +449,34 @@ const Services = () => {
             </p>
           </motion.div>
         </div>
+      </section> */}
+  {/* Category Filter */}
+  <section className="pt-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore our portfolio across different technologies and industries
+            </p>
+          </div>
+        </div>
       </section>
 
+      {/* Design Separator */}
+      <div className="relative py-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="  px-6">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* Services Section */}
       <section className="py-24 ">
         <div className="container mx-auto px-6">

@@ -101,7 +101,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-[#f0eee6] u-display-s">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32  text-white">
+      {/* <section className="relative py-20 md:py-32  text-white">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-30"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div 
@@ -116,7 +116,35 @@ const About = () => {
             </p>
           </motion.div>
         </div>
+      </section> */}
+
+        {/* Category Filter */}
+        <section className="pt-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">About SphereX</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore our portfolio across different technologies and industries
+            </p>
+          </div>
+        </div>
       </section>
+
+      {/* Design Separator */}
+      <div className="relative py-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="  px-6">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Stats Section */}
       <section className="py-20  ">
@@ -228,19 +256,20 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-white text-white">
+      <section className="py-20 bg-gradient-to-r from-[#e7e3d2] to-primary-white ">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
             Let's discuss how we can help you achieve your business goals with our expert solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="btn   text-primary hover:bg-gray-100">
+            <Link to="/contact" className="btn   text-primary hover:bg-gray-100">
               Get in Touch
-            </button>
-            <button className="btn border-2 border-white text-white hover: /10">
-              View Our Work
-            </button>
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </Link>
+            <Link to="/pricing" className="btn border-2 border-white  hover: /10">
+              View Pricing
+            </Link>
           </div>
         </div>
       </section>

@@ -121,13 +121,13 @@ const Pricing = () => {
       {/* Pricing plans (omitted for brevity in canvas preview) */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto ">
             {plans.map((plan, index) => {
               const isSelected = selectedPlan && selectedPlan.name === plan.name;
               const price = billingCycle === 'yearly' ? Math.floor(plan.price * 12 * 0.8) : plan.price;
 
               return (
-                <motion.div key={plan.name} className={`relative rounded-2xl overflow-hidden transition-all duration-300   border ${isSelected ? 'ring-2 ring-indigo-500 shadow-xl' : 'border-gray-100 shadow-sm'} ${plan.mostPopular ? 'md:-translate-y-4' : ''}`} whileHover={{ y: -6, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
+                <motion.div key={plan.name} className={`relative bg-white rounded-2xl overflow-hidden transition-all duration-300   border ${isSelected ? 'ring-2 ring-indigo-500 shadow-xl' : 'border-gray-100 shadow-sm'} ${plan.mostPopular ? 'md:-translate-y-4' : ''}`} whileHover={{ y: -6, boxShadow: '0 10px 20px rgba(0,0,0,0.1)' }} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: index * 0.1 }}>
                   {plan.mostPopular && (
                     <div className="absolute  top-0 right-0 mt-2 transform -translate-x-1/2  bg-black text-white text-xs font-semibold uppercase tracking-wide py-2 px-6 rounded-full shadow-md ">Most Popular</div>
                   )}

@@ -6,6 +6,7 @@ import OurApproach from '../components/OurApproach';
 import Pricing from '../pages/Pricing';
 import FAQList from '../components/Faq';
 import IntegrationsHero from '../components/IntegrationHero';
+import HeroSection from '../components/HeroSection';
 // Sample data - replace with actual data
 const services = [
   {
@@ -82,54 +83,8 @@ const services = [
 const Home = () => {
   return (
     <div className="min-h-screen u-display-s ">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-gradient-to-b from-bg-[#f0eee6] to-transparent"></div>
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-30"></div>
-        </div>
-
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.h1
-              className="text-4xl md:text-6xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              Transform Your Digital Presence with{' '}
-              <span className="bg-gradient-to-r from-accent-start to-accent-end bg-clip-text text-transparent">
-                Innovative Solutions
-              </span>
-            </motion.h1>
-
-            <motion.p
-              className="text-xl text-gray-600 mb-10 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
-              We help businesses leverage cutting-edge technology to create exceptional digital experiences that drive
-              growth and engagement.
-            </motion.p>
-
-            <motion.div
-              className="flex flex-col sm:flex-row justify-center gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Link to="/contact" className="btn btn-primary">
-                Get Started
-                <ArrowRightIcon className="w-5 h-5 ml-2" />
-              </Link>
-              <Link to="/services" className="btn btn-secondary">
-                Our Services
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      <HeroSection/>
+   
 
       {/* Trusted By */}
       <section className="py-12 bg-[#f0eee6] ">
@@ -146,14 +101,14 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-[#f0eee6]">
+      <section className="pt-20 bg-[#f0eee6]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <span className="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">
               Our Services
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Digital Solutions</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-600 max-w-2xl mx-auto text-[18px]">
               We offer a wide range of services to help your business thrive in the digital landscape.
             </p>
           </div>
@@ -162,7 +117,7 @@ const Home = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="  rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="  rounded-xl p-8 border-b-[6px] border-b-black/20 shadow-lg hover:shadow-xl transition-shadow duration-300"
                 whileHover={{ y: -5 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +128,7 @@ const Home = () => {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-gray-600 mb-4 text-[18px]">{service.description}</p>
                 <Link to="/services" className="inline-flex items-center text-primary font-medium group">
                   Learn more
                   <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

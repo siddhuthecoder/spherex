@@ -37,24 +37,24 @@ const approaches = [
 const OurApproach = () => {
   return (
     <section className="py-16 bg-[#f0eee6] ">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Our Approach
         </h2>
         <div className="w-24 h-1 bg-orange-500 mx-auto my-4 rounded"></div>
-        <p className="text-gray-600 max-w-3xl mx-auto">
+        <p className="text-gray-600 text-[18px] max-w-5xl mx-auto">
           What sets us apart is how we work with clients. We combine technical excellence
           with business understanding to create lasting partnerships. Our transparent
           communication and collaborative mindset ensure solutions that deliver ongoing value.
         </p>
 
         {/* Cards */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {approaches.map((item, index) => (
             <div
               key={index}
-              className="  shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition"
+              className="  shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition p-8"
             >
               <div className="mb-4">{item.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">

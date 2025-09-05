@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { useNavigate, useParams } from 'react-router-dom';
 import Footer from '../components/layout/Footer';
-
+import { Link } from 'react-router-dom';
 // Sample project data
 const projects = [
   {
@@ -416,23 +416,7 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen relative u-display-s bg-[#f0eee6]">
-      {/* Hero Section */}
-      <section className="relative py-20 md:py-32 ">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80')] bg-cover bg-center opacity-30"></div>
-        <div className="container mx-auto px-4 relative">
-          <motion.div 
-            className="max-w-3xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Projects</h1>
-            <p className="text-xl font-semibold">
-              Explore our portfolio of successful projects and see how we've helped businesses transform their ideas into reality.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    
 
       {/* Category Filter */}
       <section className="pt-16">
@@ -487,7 +471,7 @@ const Projects = () => {
       </div>
 
       {/* Projects Grid */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 ">
         <div className="container mx-auto px-4">
           {filteredProjects.length === 0 ? (
             <div className="text-center py-20">
@@ -552,19 +536,20 @@ const Projects = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-primary-white text-white">
+      <section className="py-20 bg-gradient-to-r from-[#e7e3d2] to-primary-white ">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help you bring your ideas to life with our expert services.
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Let's discuss how we can help you achieve your business goals with our expert solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="btn   text-primary hover:bg-gray-100">
-              Get a Free Quote
-            </button>
-            <button className="btn border-2 border-white text-white hover: /10">
-              Contact Us
-            </button>
+            <Link to="/contact" className="btn   text-primary hover:bg-gray-100">
+              Get in Touch
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
+            </Link>
+            <Link to="/pricing" className="btn border-2 border-white  hover: /10">
+              View Pricing
+            </Link>
           </div>
         </div>
       </section>

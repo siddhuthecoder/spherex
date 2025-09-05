@@ -121,7 +121,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen u-display-s bg-[#f0eee6]">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-20 md:py-16">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-40"></div>
         <div className="container mx-auto px-4 relative">
           <motion.div 
@@ -136,10 +136,24 @@ const Contact = () => {
             </p>
           </motion.div>
         </div>
+        <div className="relative py-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-gray-200"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <div className="  px-6">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+              <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
+              <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
       </section>
 
       {/* Contact Info */}
-      <section className="py-16  ">
+      <section className="py-10  ">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((item, index) => {
@@ -158,8 +172,8 @@ const Contact = () => {
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-700 mb-2">{item.description}</p>
-                  {item.description2 && <p className="text-gray-700 mb-4">{item.description2}</p>}
+                  <p className="text-gray-700 mb-2 text-[20px]">{item.description}</p>
+                  {item.description2 && <p className="text-gray-700 mb-4 text-[20px]">{item.description2}</p>}
                   <a 
                     href={item.link} 
                     className="inline-flex items-center text-blue-600 font-medium group hover:text-blue-800 transition-colors"

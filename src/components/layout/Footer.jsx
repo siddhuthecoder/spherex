@@ -82,7 +82,7 @@ const Footer = () => {
                 SphereX
               </span>
             </div>
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-[20px]">
               Delivering innovative technology solutions to help businesses thrive in the digital age.
             </p>
             <div className="flex space-x-4">
@@ -109,7 +109,7 @@ const Footer = () => {
                 <li key={service.name}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-[20px]"
                   >
                     {service.name}
                   </Link>
@@ -126,7 +126,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-[20px]"
                   >
                     {item.name}
                   </Link>
@@ -138,7 +138,7 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 mb-4 text-[20px]">
               Subscribe to our newsletter for the latest updates and news.
             </p>
             <form className="space-y-2">
