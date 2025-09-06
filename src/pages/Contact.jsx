@@ -152,47 +152,63 @@ const Contact = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-10  ">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div 
-                  key={index}
-                  className="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition-shadow"
-                  whileHover={{ y: -5 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mx-auto mb-4">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-2 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-700 mb-2 text-[20px]">{item.description}</p>
-                  {item.description2 && <p className="text-gray-700 mb-4 text-[20px]">{item.description2}</p>}
-                  <a 
-                    href={item.link} 
-                    className="inline-flex items-center text-blue-600 font-medium group hover:text-blue-800 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {item.linkText}
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                  </a>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+     <section className="relative py-16 ">
+  {/* decorative background */}
+  <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+    <div className="absolute -left-40 -top-20 w-[520px] h-[520px] bg-gradient-to-br from-sky-200 via-indigo-100 to-purple-100 opacity-30 blur-3xl transform rotate-45" />
+  </div>
 
+  <div className="container mx-auto px-6">
+    
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {contactInfo.map((item, index) => {
+        const Icon = item.icon;
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35, delay: index * 0.08 }}
+            whileHover={{ translateY: -6 }}
+            className="relative bg-white border-b-[6px]   rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border border-gray-100"
+          >
+            <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-50 to-sky-50 ring-1 ring-inset ring-indigo-100 mx-auto mb-5">
+              <Icon className="w-7 h-7 text-indigo-600" />
+            </div>
+
+            <h3 className="text-lg font-semibold mb-2 text-gray-900 text-center">{item.title}</h3>
+            <p className="text-gray-600 text-center text-sm">{item.description}</p>
+            {item.description2 && (
+              <p className="text-gray-500 text-center text-sm mt-1">{item.description2}</p>
+            )}
+
+            <div className="mt-5 flex justify-center">
+              <a
+                href={item.link}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-indigo-50 hover:bg-indigo-100 border border-indigo-100 text-indigo-600 transition"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.linkText}
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </a>
+            </div>
+          </motion.div>
+        );
+      })}
+    </div>
+  </div>
+</section>
       {/* Contact Form & Map */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 ">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
