@@ -55,7 +55,7 @@ const Header = () => {
               <Link 
                 key={link.name}
                 to={link.path} 
-                className={`relative font-medium  text-[20px] transition-colors duration-200 ${
+                className={`relative font-medium  text-[18px] transition-colors duration-200 ${
                   isActiveLink(link.path)
                     ? 'text-primary'
                     : 'text-gray-700 hover:text-primary'
@@ -69,7 +69,7 @@ const Header = () => {
             ))}
             <Link 
               to="/get-proposal" 
-              className="text-[20px] bg-black hover:bg-[#490000] text-white p-2 rounded-md hover:text-white mx-8"
+              className="text-[16px] bg-black hover:bg-[#490000] text-white p-2 rounded-md hover:text-white mx-8"
             >
               Get Proposal
             </Link>
