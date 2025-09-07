@@ -142,11 +142,11 @@ const Timeline = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f0eee6] py-12 px-6">
+    <div className="min-h-screen bg-[#f0eee6] py-12 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div 
-          className="bg-white rounded-3xl p-8 mb-12 border border-black/5 shadow-xl backdrop-blur-sm"
+          className="bg-white rounded-3xl p-4 md:p-8 mb-12 border border-black/5 shadow-xl backdrop-blur-sm"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -163,8 +163,8 @@ const Timeline = () => {
             </div>
             <div className="flex items-center gap-6">
               {/* Progress Bar */}
-              <div className="flex items-center gap-4">
-                <div className="w-56 h-4 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+              <div className="flex items-center md:gap-4">
+                <div className="w-56 h-2 md:h-4 bg-gray-100 rounded-full overflow-hidden shadow-inner">
                   <motion.div 
                     className="h-full bg-gradient-to-r from-black to-gray-700 rounded-full shadow-sm"
                     style={{ width: progress }}
@@ -178,13 +178,11 @@ const Timeline = () => {
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <div className="text-2xl font-bold text-black">{Math.round((currentStage / stages.length) * 100)}%</div>
+                  <div className="md:text-2xl font-bold text-black">{Math.round((currentStage / stages.length) * 100)}%</div>
                   <div className="text-xs text-black/50 font-medium">Complete</div>
                 </motion.div>
               </div>
-              <button className="p-3 rounded-2xl bg-black/5 hover:bg-black/10 border border-black/10 transition-all duration-300 hover:scale-105">
-                <ArrowPathIcon className="w-5 h-5 text-black" />
-              </button>
+             
             </div>
           </div>
           
@@ -219,7 +217,7 @@ const Timeline = () => {
             {stages.map((stage, index) => (
               <motion.div 
                 key={stage.id} 
-                className="relative flex items-start gap-8"
+                className="relative flex items-start gap-2 md:gap-8"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -232,7 +230,7 @@ const Timeline = () => {
                 
                 {/* Enhanced Stage Content */}
                 <motion.div 
-                  className="flex-1 bg-white rounded-3xl p-8 border border-black/5 shadow-xl hover:shadow-2xl transition-all duration-500 group"
+                  className="flex-1 bg-white rounded-3xl p-4 md:p-8 border border-black/5 shadow-xl hover:shadow-2xl transition-all duration-500 group"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >

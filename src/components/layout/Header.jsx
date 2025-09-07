@@ -36,11 +36,11 @@ const Header = () => {
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled 
-          ? ' /95 backdrop-blur-md shadow-md py-5' 
-          : 'bg-transparent py-4'
+          ? ' md:/95 backdrop-blur-md shadow-md py-5' 
+          : 'md:bg-transparent py-4'
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="md:container mx-auto md:px-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
@@ -98,16 +98,16 @@ const Header = () => {
 
         {/* Mobile menu */}
         <div 
-          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
-            isMenuOpen ? 'max-h-screen py-4' : 'max-h-0 py-0'
+          className={`bg-[#f0eee6] md:hidden  transition-all duration-300 ease-in-out overflow-hidden ${
+            isMenuOpen ? 'min-h-screen py-4' : 'max-h-0 py-0'
           }`}
         >
-          <div className="flex flex-col space-y-4 mt-4">
+          <div className="flex flex-col space-y-4 mt-4 items-center">
             {navLinks.map((link) => (
               <Link 
                 key={link.name}
                 to={link.path} 
-                className={`block py-2 border-b border-gray-100 transition-colors duration-200 ${
+                className={`block py-2 border-b-[1px] border-b-[#d4cba5] w-full text-center transition-colors duration-200 ${
                   isActiveLink(link.path)
                     ? 'text-primary font-semibold'
                     : 'text-gray-700 hover:text-primary'
@@ -119,7 +119,7 @@ const Header = () => {
             ))}
             <Link 
               to="/get-proposal" 
-              className=" w-full mt-4"
+              className=" w-full mt-4 text-center"
               onClick={() => setIsMenuOpen(false)}
             >
               Get Proposal

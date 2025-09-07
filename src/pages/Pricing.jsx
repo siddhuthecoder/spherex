@@ -230,7 +230,7 @@ const Pricing = () => {
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 bg-white rounded-2xl shadow-sm mx-4 sm:mx-8 lg:mx-auto max-w-7xl px-6 py-12">
+      <section className=" bg-white rounded-2xl shadow-sm  sm:mx-8 lg:mx-auto max-w-7xl px-6 py-12">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <span className="inline-block px-4 py-1.5 text-sm font-semibold text-black bg-black/5 rounded-full mb-4">
             Add-ons

@@ -36,7 +36,7 @@ const approaches = [
 
 const OurApproach = () => {
   return (
-    <section className="py-16 bg-[#f0eee6] ">
+    <section className="py-16 bg-[#f0eee6] px-4 ">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -54,7 +54,7 @@ const OurApproach = () => {
           {approaches.map((item, index) => (
             <div
               key={index}
-              className="  shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition p-8"
+              className="  shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition md:p-8"
             >
               <div className="mb-4">{item.icon}</div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">

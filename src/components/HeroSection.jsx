@@ -246,7 +246,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <div className="min-h-[100vh] u-display-s bg-[#f0eee6] flex items-center justify-center px-3 sm:px-4 pt-16 sm:pt-20 relative overflow-hidden">
+      <div className="min-h-[100vh] u-display-s bg-[#f0eee6] flex items-center justify-center px-3 sm:px-4 pt-4 sm:pt-20 relative overflow-hidden">
         {/* Professional Grid Background */}
         <div className="absolute inset-0 opacity-30">
           <div
