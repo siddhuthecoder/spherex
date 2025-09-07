@@ -284,12 +284,12 @@ const HeroSection = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold mb-6 sm:mb-8 leading-tight px-2 sm:px-4 tracking-tight">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-black via-gray-800 to-black font-orbitron drop-shadow-2xl">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-black via-gray-800 to-black font-rubik drop-shadow-2xl">
                 {typewriterText}
                 <span className="animate-pulse text-black/60">|</span>
               </span>
               <br />
-              <span className="text-black font-orbitron text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl drop-shadow-2xl">
+              <span className="text-black font-rubik text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-6xl drop-shadow-2xl">
                 SphereX
               </span>
             </h1>

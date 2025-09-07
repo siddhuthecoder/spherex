@@ -7,6 +7,7 @@ import Pricing from '../pages/Pricing';
 import FAQList from '../components/Faq';
 import IntegrationsHero from '../components/IntegrationHero';
 import HeroSection from '../components/HeroSection';
+import Timeline from '../components/Timeline';
 // Sample data - replace with actual data
 const services = [
   {
@@ -196,12 +197,14 @@ const Home = () => {
         </div>
       </section> */}
       <OurApproach/>
-      <HowWeWork/>
+      {/* <HowWeWork/> */}
+      <Timeline/>
       <FAQList/>
       <Pricing/>
       <IntegrationsHero/>
+     
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#e7e3d2] to-primary-white ">
+      <section className="py-20 bg-[#f3f4f6]">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to start your project?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">

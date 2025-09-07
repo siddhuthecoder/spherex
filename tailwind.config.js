@@ -24,8 +24,9 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans: ['Open Sans', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif']
+        sans: ['Rubik', 'sans-serif'],
+        heading: ['Rubik', 'sans-serif'],
+        serif: ['Rubik', 'sans-serif']
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',

@@ -80,7 +80,7 @@ const FAQList = ({ faqs: propFaqs }) => {
   const defaultFaqs = [
     {
       question: "Who's behind SphereX?",
-      answer: "SphereX (pxlsgrds) was founded by Tejas GK. We specialize in website and mobile app design, development, and user experience optimization. Our goal is to deliver high-quality, tailored solutions to businesses looking for top-notch digital experiences.",
+      answer: "SphereX  was founded by Siddartha Yernagula. We specialize in website and mobile app design, development, and user experience optimization. Our goal is to deliver high-quality, tailored solutions to businesses looking for top-notch digital experiences.",
     },
     {
       question: 'How does your process work?',
@@ -145,7 +145,7 @@ const FAQList = ({ faqs: propFaqs }) => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-indigo-100/20 rounded-full blur-2xl"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header Section */}
         <motion.div 
           className="text-center mb-16"
@@ -179,7 +179,7 @@ const FAQList = ({ faqs: propFaqs }) => {
 
         {/* FAQ Accordion with Border */}
         <motion.div 
-          className="max-w-4xl mx-auto relative"
+          className="max-w-7xl mx-auto relative"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

@@ -60,32 +60,32 @@ export default function IntegrationsHero() {
   const marqueeItems = [...icons, ...icons];
 
   return (
-    <section className="w-full py-12 px-6 u-display-s bg-[#f0eee6] ">
+    <section className="w-full py-12 px-6 u-display-s bg-[#f3f4f6] ">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center ">
         {/* LEFT: Text */}
         <div className="w-full lg:w-2/5">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-[#2c214c]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-black">
             Fully integrated
             <br />
             with your stack
           </h1>
-          <p className="mt-6 text-gray-600 max-w-xl text-xl">
+          <p className="mt-6 text-black/70 max-w-xl text-xl">
             Script, share, and analyze your demos at superspeed with powerful integrations.
           </p>
           <a
             href="#"
-            className="inline-block mt-6 text-pink-600 font-semibold underline decoration-pink-400"
+            className="inline-block mt-6 text-black font-semibold underline decoration-black/40 hover:decoration-black/60 transition-colors"
           >
             Read more
           </a>
         </div>
 
-        {/* RIGHT: Blue panel with rounded corner and marquee */}
+        {/* RIGHT: Panel with rounded corner and marquee */}
         <div className="w-full lg:w-3/5">
           <div className="relative">
-            {/* Blue rounded panel with slanted left edge */}
+            {/* White rounded panel with slanted left edge */}
             <div
-              className="overflow-hidden rounded-2xl bg-[#bfeeff] mt-[20px] md:mt-0 p-[28px_20px] 
+              className="overflow-hidden rounded-2xl bg-[#cec6b9] border border-black/10 shadow-lg mt-[20px] md:mt-0 p-[28px_20px] 
              md:[clip-path:polygon(21%_1%,100%_0%,100%_100%,0%_100%)]"
               
             >
@@ -97,7 +97,7 @@ export default function IntegrationsHero() {
                     {marqueeItems.map((src, idx) => (
                       <div
                         key={idx + "-" + src}
-                        className="flex-shrink-0 w-32 h-32   rounded-xl shadow-[0_6px_0_rgba(91,42,145,0.18)] flex items-center justify-center p-3"
+                        className="flex-shrink-0 w-32 h-32 bg-white rounded-xl shadow-[0_6px_0_rgba(0,0,0,0.1)] border border-black/5 flex items-center justify-center p-3"
                       >
                         <img
                           src={src}
@@ -156,9 +156,9 @@ export default function IntegrationsHero() {
           100% { transform: translateX(-50%) translateY(-50%); }
         }
 
-        /* Slight shadow mimic like the screenshot purple shadow below the cards */
-        .shadow-[0_6px_0_rgba(91,42,145,0.18)] {
-          box-shadow: 0 6px 0 rgba(91,42,145,0.18);
+        /* Slight shadow mimic like the screenshot shadow below the cards */
+        .shadow-[0_6px_0_rgba(0,0,0,0.1)] {
+          box-shadow: 0 6px 0 rgba(0,0,0,0.1);
         }
       `}</style>
     </section>

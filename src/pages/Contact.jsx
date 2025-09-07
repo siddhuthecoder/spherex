@@ -172,7 +172,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: index * 0.08 }}
             whileHover={{ translateY: -6 }}
-            className="relative bg-white border-b-[6px]   rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border border-gray-100"
+            className="relative bg-white border-b-[6px] rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border border-gray-100"
           >
             <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-50 to-sky-50 ring-1 ring-inset ring-indigo-100 mx-auto mb-5">
               <Icon className="w-7 h-7 text-indigo-600" />

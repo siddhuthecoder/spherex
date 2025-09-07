@@ -72,17 +72,17 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-[#141413] text-gray-300">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <span className="text-2xl font-bold bg-gradient-to-r from-accent-start to-accent-end bg-clip-text text-transparent">
+              <span className="text-2xl font-bold text-white text-transparent">
                 SphereX
               </span>
             </div>
-            <p className="text-gray-400 text-[20px]">
+            <p className="text-gray-400 text-[16px]">
               Delivering innovative technology solutions to help businesses thrive in the digital age.
             </p>
             <div className="flex space-x-4">
@@ -109,7 +109,7 @@ const Footer = () => {
                 <li key={service.name}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors text-[20px]"
+                    className="text-gray-400 hover:text-white transition-colors text-[16px]"
                   >
                     {service.name}
                   </Link>
@@ -126,7 +126,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.path} 
-                    className="text-gray-400 hover:text-white transition-colors text-[20px]"
+                    className="text-gray-400 hover:text-white transition-colors text-[16px]"
                   >
                     {item.name}
                   </Link>
@@ -138,7 +138,7 @@ const Footer = () => {
           {/* Newsletter */}
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Newsletter</h3>
-            <p className="text-gray-400 mb-4 text-[20px]">
+            <p className="text-gray-400 mb-4 text-[16px]">
               Subscribe to our newsletter for the latest updates and news.
             </p>
             <form className="space-y-2">
