@@ -175,7 +175,7 @@ const Timeline = () => {
                 
                 {/* Enhanced Stage Content */}
                 <motion.div 
-                  className="flex-1 bg-white rounded-3xl p-4 md:p-8 border border-black/5 shadow-md hover:shadow-xl transition-all duration-500 group"
+                  className="flex-1 bg-gray-300 rounded-3xl p-4 md:p-8 border border-black/5 shadow-md hover:shadow-xl transition-all duration-500 group"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -237,7 +237,7 @@ const Timeline = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="bg-white rounded-3xl p-8 border border-black/5 shadow-lg">
+          <div className="bg-[#E3DACC] rounded-3xl p-8 border border-black/5 shadow-lg">
             <h3 className="text-2xl font-bold text-black mb-4">Ready to Get Started?</h3>
             <p className="text-black/70 text-base mb-6 max-w-2xl mx-auto">
               Let's bring your vision to life with our proven development process. 
@@ -249,7 +249,7 @@ const Timeline = () => {
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
             >
-              <RocketLaunchIcon className="w-5 h-5" />
+              <RocketLaunchIcon className="w-5 h-5 " />
               Start Your Project
               <ArrowRightIcon className="w-4 h-4" />
             </motion.button>

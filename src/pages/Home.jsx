@@ -14,31 +14,37 @@ const services = [
     title: 'Web Development',
     description: 'Custom web applications built with modern technologies for optimal performance.',
     icon: '👨‍💻',
+    color:"#D9D7B1"
   },
   {
     title: 'Mobile Apps',
     description: 'Native and cross-platform mobile applications for iOS and Android.',
     icon: '📱',
+    color:"#E4ADA8"
   },
   {
     title: 'AI Solutions',
     description: 'Leverage the power of artificial intelligence for your business needs.',
     icon: '🤖',
+    color:"#E6DFCD"
   },
   {
     title: 'Blockchain',
     description: 'Secure and transparent blockchain solutions for various industries.',
     icon: '⛓️',
+    color:"#BCD1CA"
   },
   {
     title: 'UI/UX Design',
     description: 'Beautiful and intuitive user interfaces that enhance user experience.',
     icon: '🎨',
+    color:"#CBCADB"
   },
   {
     title: 'Cloud Solutions',
     description: 'Scalable cloud infrastructure and services for your applications.',
     icon: '☁️',
+    color:"#D9D7B1"
   },
 ];
 
@@ -150,7 +156,8 @@ const Home = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-xl p-8 border-b-[6px] border-b-black/20 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                style={{ backgroundColor: service.color }} 
+                className={` rounded-xl p-8 border-b-[6px] border-b-black/20 shadow-lg hover:shadow-xl transition-shadow duration-300`}
                 whileHover={{ 
                   y: -8, 
                   scale: 1.02,
@@ -166,7 +173,7 @@ const Home = () => {
                 }}
               >
                 <motion.div 
-                  className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center text-3xl mb-6"
+                  className="w-16 h-16 rounded-lg bg-white flex items-center justify-center text-3xl mb-6"
                   whileHover={{ 
                     rotate: 5, 
                     scale: 1.1,
