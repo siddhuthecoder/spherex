@@ -145,62 +145,7 @@ const Timeline = () => {
     <div className="min-h-screen bg-[#f0eee6] py-12 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <motion.div 
-          className="bg-white rounded-3xl p-4 md:p-8 mb-12 border border-black/5 shadow-xl backdrop-blur-sm"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-6">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-black/5 rounded-2xl">
-                <RocketLaunchIcon className="w-8 h-8 text-black" />
-              </div>
-              <div>
-                <h1 className="text-3xl lg:text-4xl font-bold text-black mb-2">How We Work</h1>
-                <p className="text-black/60 text-sm font-medium">Our proven development process</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-6">
-              {/* Progress Bar */}
-              <div className="flex items-center md:gap-4">
-                <div className="w-56 h-2 md:h-4 bg-gray-100 rounded-full overflow-hidden shadow-inner">
-                  <motion.div 
-                    className="h-full bg-gradient-to-r from-black to-gray-700 rounded-full shadow-sm"
-                    style={{ width: progress }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                  />
-                </div>
-                <motion.div 
-                  className="text-right"
-                  key={currentStage}
-                  initial={{ scale: 1.1 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="md:text-2xl font-bold text-black">{Math.round((currentStage / stages.length) * 100)}%</div>
-                  <div className="text-xs text-black/50 font-medium">Complete</div>
-                </motion.div>
-              </div>
-             
-            </div>
-          </div>
-          
-          {/* Current Stage Summary */}
-          <motion.div 
-            className="bg-black/5 rounded-2xl p-4 border border-black/10"
-            key={currentStage}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-black rounded-full"></div>
-              <span className="text-sm font-semibold text-black">Currently in:</span>
-              <span className="text-sm font-bold text-black">{stages[currentStage - 1]?.title}</span>
-            </div>
-          </motion.div>
-        </motion.div>
+       
 
         {/* Timeline Stages */}
         <div className="relative" ref={containerRef}>
@@ -230,7 +175,7 @@ const Timeline = () => {
                 
                 {/* Enhanced Stage Content */}
                 <motion.div 
-                  className="flex-1 bg-white rounded-3xl p-4 md:p-8 border border-black/5 shadow-xl hover:shadow-2xl transition-all duration-500 group"
+                  className="flex-1 bg-white rounded-3xl p-4 md:p-8 border border-black/5 shadow-md hover:shadow-xl transition-all duration-500 group"
                   whileHover={{ y: -8, scale: 1.02 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -292,7 +237,7 @@ const Timeline = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="bg-white rounded-3xl p-8 border border-black/5 shadow-xl">
+          <div className="bg-white rounded-3xl p-8 border border-black/5 shadow-lg">
             <h3 className="text-2xl font-bold text-black mb-4">Ready to Get Started?</h3>
             <p className="text-black/70 text-base mb-6 max-w-2xl mx-auto">
               Let's bring your vision to life with our proven development process. 

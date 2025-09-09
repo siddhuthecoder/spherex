@@ -186,7 +186,7 @@ const FAQList = ({ faqs: propFaqs }) => {
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {/* Dashed Border Container */}
-          <div className="relative border-2 border-dashed border-gray-300 rounded-3xl p-8 md:p-12  /50 backdrop-blur-sm">
+          <div className="relative  p-8 md:p-12  /50 backdrop-blur-sm">
             {/* Animated border elements */}
             <motion.div 
               className="absolute -top-4 -left-4 w-8 h-8 rounded-full bg-blue-500/20"
