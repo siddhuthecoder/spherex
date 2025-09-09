@@ -85,7 +85,7 @@ export default function IntegrationsHero() {
           <div className="relative">
             {/* White rounded panel with slanted left edge */}
             <div
-              className="overflow-hidden rounded-2xl bg-black border border-black/10 shadow-lg mt-[20px] md:mt-0 p-[28px_20px] 
+              className="overflow-hidden rounded-2xl bg-[#bcd1ca] border border-black/10 shadow-lg mt-[20px] md:mt-0 p-[28px_20px] 
              md:[clip-path:polygon(21%_1%,100%_0%,100%_100%,0%_100%)]"
               
             >

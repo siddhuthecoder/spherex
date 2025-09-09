@@ -12,6 +12,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Pricing from './pages/Pricing';
 import NotFound from './pages/NotFound';
+import BookNow from './components/BookNow';
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -41,6 +42,7 @@ function App() {
             <Route path="/projects/:projectId" element={<Projects />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/contact" element={<Contact />} />
+           
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
