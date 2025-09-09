@@ -86,7 +86,7 @@ const OurApproach = () => {
           {approaches.map((item, index) => (
             <motion.div
               key={index}
-              className="bg-[#f0eee6] shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition md:p-8"
+              className="bg-[#E6DFCD] shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition md:p-8"
               whileHover={{ 
                 y: -8, 
                 scale: 1.02,
