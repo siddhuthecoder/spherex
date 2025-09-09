@@ -7,7 +7,13 @@ import {
   PlayIcon, 
   CurrencyDollarIcon,
   XMarkIcon,
-  ArrowRightIcon
+  ArrowRightIcon,
+  MagnifyingGlassIcon,
+  PencilSquareIcon,
+  CodeBracketIcon,
+  ShieldCheckIcon,
+  CloudArrowUpIcon,
+  LifebuoyIcon
 } from '@heroicons/react/24/outline';
 
 const Timeline = () => {
@@ -19,42 +25,42 @@ const Timeline = () => {
       id: 1,
       title: "Analysis",
       description: "Translating your business goals into actionable technical requirements and strategic project roadmaps.",
-      icon: CheckCircleIcon,
+      icon: MagnifyingGlassIcon,
       step: "01"
     },
     {
       id: 2,
       title: "Design",
       description: "Architecting scalable solutions aligned with your business objectives and future growth plans.",
-      icon: PlayIcon,
+      icon: PencilSquareIcon,
       step: "02"
     },
     {
       id: 3,
       title: "Development",
       description: "Building your solution using proven technologies for rapid market delivery and business agility.",
-      icon: PlayIcon,
+      icon: CodeBracketIcon,
       step: "03"
     },
     {
       id: 4,
       title: "Quality Assurance",
       description: "Rigorously validating every feature to ensure flawless performance in real-world business scenarios.",
-      icon: CheckCircleIcon,
+      icon: ShieldCheckIcon,
       step: "04"
     },
     {
       id: 5,
       title: "Deployment",
       description: "Ensuring seamless transition to production with zero disruption to your business operations.",
-      icon: PlayIcon,
+      icon: CloudArrowUpIcon,
       step: "05"
     },
     {
       id: 6,
       title: "Support",
       description: "Proactively maintaining and optimizing your solution to maximize business value and ROI.",
-      icon: CheckCircleIcon,
+      icon: LifebuoyIcon,
       step: "06"
     }
   ];
