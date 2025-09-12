@@ -393,7 +393,7 @@ const Projects = () => {
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <motion.a
                     href="/contact"
-                    className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-gray-900   hover:bg-gray-50 shadow-sm transition-colors duration-200"
+                    className="inline-flex items-center bg-white justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-gray-900   hover:bg-gray-50 shadow-sm transition-colors duration-200"
                     whileHover={{ y: -2, boxShadow: '0 10px 20px -5px rgba(0, 0, 0, 0.1)' }}
                   >
                     Get in Touch
@@ -543,7 +543,7 @@ const Projects = () => {
             Let's discuss how we can help you achieve your business goals with our expert solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link to="/contact" className="btn   text-primary hover:bg-gray-100">
+            <Link to="/contact" className="btn   text-white hover:bg-gray-100">
               Get in Touch
               <ArrowRightIcon className="w-5 h-5 ml-2" />
             </Link>
