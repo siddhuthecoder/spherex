@@ -40,98 +40,37 @@ const OurApproach = () => {
     <section className="py-16 bg-[#f0eee6] px-4 ">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-gray-900"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
             Our Approach
-          </motion.h2>
-          <motion.div 
-            className="w-24 h-1 bg-orange-500 mx-auto my-4 rounded"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          />
-          <motion.p 
-            className="text-gray-600 text-[18px] max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
+          </h2>
+          <div className="w-24 h-1 bg-orange-500 mx-auto my-4 rounded" />
+          <p className="text-gray-600 text-[18px] max-w-5xl mx-auto">
             What sets us apart is how we work with clients. We combine technical excellence
             with business understanding to create lasting partnerships. Our transparent
             communication and collaborative mindset ensure solutions that deliver ongoing value.
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         {/* Cards */}
-        <motion.div 
-          className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-        >
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {approaches.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              className="bg-[#E6DFCD] shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition md:p-8"
-              whileHover={{ 
-                y: -8, 
-                scale: 1.02,
-                transition: { duration: 0.3, ease: "easeOut" }
-              }}
-              initial={{ opacity: 0, y: 40, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 0.5, 
-                delay: index * 0.1,
-                ease: "easeOut"
-              }}
+              className="bg-[#E6DFCD] shadow-md rounded-2xl p-6 text-left border hover:shadow-lg transition-all duration-300 hover:-translate-y-1 md:p-8"
             >
-              <motion.div 
-                className="mb-4"
-                whileHover={{ 
-                  rotate: 5, 
-                  scale: 1.1,
-                  transition: { duration: 0.2 }
-                }}
-              >
+              <div className="mb-4">
                 {item.icon}
-              </motion.div>
-              <motion.h3 
-                className="text-lg font-semibold text-gray-900 mb-2"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-              >
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
                 {item.title}
-              </motion.h3>
-              <motion.p 
-                className="text-gray-600 text-sm"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-              >
+              </h3>
+              <p className="text-gray-600 text-sm">
                 {item.desc}
-              </motion.p>
-            </motion.div>
+              </p>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

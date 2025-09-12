@@ -8,6 +8,7 @@ import FAQList from '../components/Faq';
 import IntegrationsHero from '../components/IntegrationHero';
 import HeroSection from '../components/HeroSection';
 import Timeline from '../components/Timeline';
+import Popular from '../components/Popular';
 // Sample data - replace with actual data
 const services = [
   {
@@ -106,130 +107,218 @@ const Home = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="pt-20 bg-[#f0eee6]">
         <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.span 
-              className="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-            >
+          <div className="text-center mb-16">
+            <span className="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">
               Our Services
-            </motion.span>
-            <motion.h2 
-              className="text-3xl md:text-4xl font-bold mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Comprehensive Digital Solutions
-            </motion.h2>
-            <motion.p 
-              className="text-gray-600 max-w-2xl mx-auto text-[18px]"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-[18px]">
               We offer a wide range of services to help your business thrive in the digital landscape.
-            </motion.p>
-          </motion.div>
+            </p>
+          </div>
 
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
                 style={{ backgroundColor: service.color }} 
-                className={` rounded-xl p-8 border-b-[6px] border-b-black/20 shadow-lg hover:shadow-xl transition-shadow duration-300`}
-                whileHover={{ 
-                  y: -8, 
-                  scale: 1.02,
-                  transition: { duration: 0.3, ease: "easeOut" }
-                }}
-                initial={{ opacity: 0, y: 40, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: index * 0.1,
-                  ease: "easeOut"
-                }}
+                className="rounded-xl p-8 border-b-[6px] border-b-black/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
-                <motion.div 
-                  className="w-16 h-16 rounded-lg bg-white flex items-center justify-center text-3xl mb-6"
-                  whileHover={{ 
-                    rotate: 5, 
-                    scale: 1.1,
-                    transition: { duration: 0.2 }
-                  }}
-                >
+                <div className="w-16 h-16 rounded-lg bg-white flex items-center justify-center text-3xl mb-6">
                   {service.icon}
-                </motion.div>
-                <motion.h3 
-                  className="text-xl font-bold mb-3"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                >
+                </div>
+                <h3 className="text-xl font-bold mb-3">
                   {service.title}
-                </motion.h3>
-                <motion.p 
-                  className="text-gray-600 mb-4 text-[18px]"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                >
+                </h3>
+                <p className="text-gray-600 mb-4 text-[18px]">
                   {service.description}
-                </motion.p>
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Link to="/services" className="inline-flex items-center text-primary font-medium group">
-                    Learn more
-                    <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </motion.div>
-              </motion.div>
+                </p>
+                <Link to="/services" className="inline-flex items-center text-primary font-medium group">
+                  Learn more
+                  <ArrowRightIcon className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="text-center mt-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link to="/services" className="inline-flex items-center text-primary font-medium group">
-                View all services
-                <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </motion.div>
-          </motion.div>
+          <div className="text-center mt-12">
+            <Link to="/services" className="inline-flex items-center text-primary font-medium group hover:scale-105 transition-transform duration-200">
+              View all services
+              <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects Section */}
+      <section className="pt-20 bg-[#f0eee6]">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="inline-block px-3 py-1 text-sm font-semibold text-primary bg-primary/10 rounded-full mb-4">
+              Featured Projects
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Latest Work
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-[18px]">
+              Discover some of our recent projects that showcase our expertise and innovation.
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {/* Project 1 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex flex-col lg:flex-row">
+                {/* Content Side */}
+                <div className="lg:w-1/2 p-12 flex flex-col justify-center">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    E-commerce Platform
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-8">
+                    A full-featured e-commerce platform with payment integration and inventory management.
+                  </p>
+                  
+                  {/* Keywords */}
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {['React', 'Node.js', 'MongoDB', 'Stripe'].map((keyword, keywordIndex) => (
+                      <span 
+                        key={keywordIndex}
+                        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-yellow-100 transition-colors duration-200"
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Learn More Link */}
+                  <button 
+                    onClick={() => window.location.href = '/projects/1'}
+                    className="inline-flex items-center text-yellow-500 font-medium text-lg group hover:text-yellow-600 transition-colors duration-200"
+                  >
+                    View Project
+                    <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
+                </div>
+                
+                {/* Image Side */}
+                <div className="lg:w-1/2 h-[400px]">
+                  <div className="h-80 lg:h-full overflow-hidden rounded-r-2xl lg:rounded-r-2xl lg:rounded-l-none">
+                    <img 
+                      src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                      alt="E-commerce Platform"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 2 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex flex-col lg:flex-row-reverse">
+                {/* Content Side */}
+                <div className="lg:w-1/2 p-12 flex flex-col justify-center">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    Mobile Banking App
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-8">
+                    A secure mobile banking application with biometric authentication and real-time transactions.
+                  </p>
+                  
+                  {/* Keywords */}
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {['React Native', 'Node.js', 'PostgreSQL', 'AWS'].map((keyword, keywordIndex) => (
+                      <span 
+                        key={keywordIndex}
+                        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-yellow-100 transition-colors duration-200"
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Learn More Link */}
+                  <button 
+                    onClick={() => window.location.href = '/projects/2'}
+                    className="inline-flex items-center text-yellow-500 font-medium text-lg group hover:text-yellow-600 transition-colors duration-200"
+                  >
+                    View Project
+                    <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
+                </div>
+                
+                {/* Image Side */}
+                <div className="lg:w-1/2 h-[400px]">
+                  <div className="h-80 lg:h-full overflow-hidden rounded-l-2xl lg:rounded-l-2xl lg:rounded-r-none">
+                    <img 
+                      src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                      alt="Mobile Banking App"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 3 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="flex flex-col lg:flex-row">
+                {/* Content Side */}
+                <div className="lg:w-1/2 p-12 flex flex-col justify-center">
+                  <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    AI Analytics Dashboard
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-8">
+                    A data visualization dashboard with AI-powered insights and predictive analytics.
+                  </p>
+                  
+                  {/* Keywords */}
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {['React', 'D3.js', 'Python', 'TensorFlow'].map((keyword, keywordIndex) => (
+                      <span 
+                        key={keywordIndex}
+                        className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium hover:bg-yellow-100 transition-colors duration-200"
+                      >
+                        {keyword}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  {/* Learn More Link */}
+                  <button 
+                    onClick={() => window.location.href = '/projects/3'}
+                    className="inline-flex items-center text-yellow-500 font-medium text-lg group hover:text-yellow-600 transition-colors duration-200"
+                  >
+                    View Project
+                    <ArrowRightIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
+                </div>
+                
+                {/* Image Side */}
+                <div className="lg:w-1/2 h-[400px]">
+                  <div className="h-80 lg:h-full overflow-hidden rounded-r-2xl lg:rounded-r-2xl lg:rounded-l-none">
+                    <img 
+                      src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                      alt="AI Analytics Dashboard"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/projects" className="inline-flex items-center text-primary font-medium group hover:scale-105 transition-transform duration-200">
+              View all projects
+              <ArrowTopRightOnSquareIcon className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 

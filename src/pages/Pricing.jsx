@@ -175,7 +175,7 @@ const Pricing = () => {
       <section className="py-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 text-sm font-semibold text-black bg-black/5 rounded-full mb-4">
+            <span className="inline-block px-4 my-6 text-sm font-semibold text-black bg-black/5 rounded-full mb-4">
               Simple, Transparent Pricing
             </span>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -208,10 +208,10 @@ const Pricing = () => {
             {pricingModel === 'fixed' ? (
               <motion.div 
                 key="fixed"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.15 }}
                 className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto"
               >
                 {plans.map((plan, index) => {
@@ -221,12 +221,12 @@ const Pricing = () => {
                   return (
                     <motion.div 
                       key={plan.name} 
-                      className={`relative bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border ${isSelected ? 'ring-2 ring-black' : 'border-gray-200'} ${plan.mostPopular ? 'border-black' : ''}`}
-                      whileHover={{ y: -8, boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' }}
-                      initial={{ opacity: 0, y: 20 }}
+                      className={`relative bg-[#bcd1ca] rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border ${isSelected ? 'ring-2 ring-black' : 'border-gray-200'} ${plan.mostPopular ? 'border-black' : ''}`}
+                      whileHover={{ y: -4, boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' }}
+                      initial={{ opacity: 0, y: 10 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      transition={{ duration: 0.2, delay: index * 0.05 }}
                     >
                       {plan.mostPopular && (
                         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs font-semibold tracking-wide py-1.5 px-4 rounded-full shadow-md flex items-center">
@@ -291,10 +291,10 @@ const Pricing = () => {
             ) : (
               <motion.div 
                 key="retainer"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.15 }}
                 className="max-w-7xl mx-auto"
               >
                 {/* Retainer Model Header */}
@@ -375,10 +375,10 @@ const Pricing = () => {
                 <div className="mb-16">
                   <motion.div 
                     className="max-w-4xl mx-auto px-8"
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
+                    transition={{ duration: 0.3, delay: 0.1 }}
                   >
                     <div className="relative h-3 bg-gray-200 rounded-full overflow-visible">
                       <motion.div 
@@ -386,7 +386,7 @@ const Pricing = () => {
                         initial={{ width: 0 }}
                         whileInView={{ width: "100%" }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 0.5 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
                       />
                       
                       {/* Tier indicators */}
@@ -444,9 +444,9 @@ const Pricing = () => {
                 {/* Selected Tier Details */}
                 <motion.div 
                   key={selectedTier}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.15 }}
                   className="bg-white rounded-3xl p-8 shadow-lg mb-16"
                 >
                   <div className="text-center mb-8">
@@ -513,10 +513,10 @@ const Pricing = () => {
                       <motion.div 
                         key={index} 
                         className="bg-white rounded-2xl p-6 text-center"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                        transition={{ duration: 0.2, delay: index * 0.05 }}
                       >
                         <div className="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center text-lg font-bold mx-auto mb-4">
                           {index + 1}
@@ -552,16 +552,16 @@ const Pricing = () => {
             return (
               <motion.div 
                 key={service.name} 
-                className={`relative bg-white rounded-xl p-6 transition-all duration-300 border-2 ${
+                className={`relative bg-white rounded-xl p-6 transition-all duration-200 border-2 ${
                   isSelected 
                     ? 'border-black bg-black/5 shadow-md' 
                     : 'border-gray-100 hover:border-black/20 hover:shadow-sm'
                 }`} 
-                whileHover={{ y: -4, boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05)' }} 
-                initial={{ opacity: 0, y: 20 }} 
+                whileHover={{ y: -2, boxShadow: '0 5px 10px -3px rgba(0, 0, 0, 0.05)' }} 
+                initial={{ opacity: 0, y: 10 }} 
                 whileInView={{ opacity: 1, y: 0 }} 
                 viewport={{ once: true }} 
-                transition={{ duration: 0.3, delay: index * 0.1 }}
+                transition={{ duration: 0.2, delay: index * 0.05 }}
               >
                 {service.popular && (
                   <div className="absolute -top-2 right-4 bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">

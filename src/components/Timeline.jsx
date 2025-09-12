@@ -218,32 +218,14 @@ const Timeline = () => {
     <div className="min-h-screen bg-[#f0eee6] py-8 sm:py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
-        <motion.div 
-          className="text-center mb-12 sm:mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
             How We Work
-          </motion.h2>
-          <motion.p 
-            className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our proven process ensures exceptional results at every stage of your project
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
 
         {/* Timeline Stages */}
         <div className="relative" ref={containerRef}>
@@ -315,7 +297,7 @@ const Timeline = () => {
                             {stage.title}
                           </motion.h3>
                           <AnimatePresence>
-                            {stage.id === currentStage && (
+                            {/* {stage.id === currentStage && (
                               <motion.span 
                                 className="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-100 text-black text-xs sm:text-sm font-semibold rounded-full border border-black/20"
                                 initial={{ opacity: 0, scale: 0.8 }}
@@ -331,7 +313,7 @@ const Timeline = () => {
                                 <span className="hidden sm:inline">Active Stage</span>
                                 <span className="sm:hidden">Active</span>
                               </motion.span>
-                            )}
+                            )} */}
                           </AnimatePresence>
                         </div>
                       </div>

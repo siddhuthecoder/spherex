@@ -129,7 +129,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">Get in Touch</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 mt-6">Get in Touch</h1>
             <p className="text-xl text-gray-700">
               Have a question or want to discuss a project? We'd love to hear from you.
             </p>
@@ -152,7 +152,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info */}
-     <section className="relative py-16 ">
+     <section className="relative ">
   {/* decorative background */}
   <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
     <div className="absolute -left-40 -top-20 w-[520px] h-[520px] bg-gradient-to-br from-sky-200 via-indigo-100 to-purple-100 opacity-30 blur-3xl transform rotate-45" />
@@ -172,7 +172,7 @@ const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.35, delay: index * 0.08 }}
             whileHover={{ translateY: -6 }}
-            className="relative bg-white border-b-[6px] rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow border border-gray-100"
+            className="relative bg-[#e3dacc] rounded-2xl p-8 shadow-md hover:shadow-xl transition-shadow"
           >
             <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-indigo-50 to-sky-50 ring-1 ring-inset ring-indigo-100 mx-auto mb-5">
               <Icon className="w-7 h-7 text-indigo-600" />

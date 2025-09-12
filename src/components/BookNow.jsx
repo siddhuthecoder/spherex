@@ -87,7 +87,7 @@ const BookNow = ({ isOpen, onClose }) => {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 lg:p-8">
       {/* Close Button at Top-Right of Screen */}
       <button
         onClick={onClose}
@@ -98,7 +98,7 @@ const BookNow = ({ isOpen, onClose }) => {
 
       {/* Black Blur Backdrop */}
       <div className="absolute inset-0 backdrop-blur-md bg-black bg-opacity-50" onClick={onClose} />
-      <div className="relative bg-black text-white rounded-lg shadow-2xl w-full max-w-6xl h-[98vh] sm:h-[700px] overflow-hidden">
+      <div className="relative bg-black text-white rounded-lg shadow-2xl w-full max-w-5xl lg:max-w-6xl h-[98vh] sm:h-[500px] overflow-hidden">
         <div className="flex flex-col lg:flex-row h-full overflow-hidden">
           {/* Left Panel - Meeting Info */}
           <div className="w-full lg:w-[280px] bg-black border-b lg:border-b-0 lg:border-r border-gray-700 flex flex-col min-h-0 overflow-y-auto">
