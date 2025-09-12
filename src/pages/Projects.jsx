@@ -553,7 +553,7 @@ const Projects = () => {
           </div>
         </div>
       </section>
-      <Footer/>
+     
     </div>
   );
 };
